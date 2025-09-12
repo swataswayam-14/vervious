@@ -111,3 +111,47 @@ sequenceDiagram
 * **Graceful Shutdowns**
    * Services unsubscribe from NATS before exit.
    * Prevents dangling consumers and message loss.
+
+
+# Running Locally with Docker Compose
+
+## Prerequisites
+- [Docker](https://docs.docker.com/get-docker/) installed  
+- [Docker Compose](https://docs.docker.com/compose/install/) installed  
+
+## Steps
+
+### 1. **Clone the repository**
+```bash
+git clone https://github.com/swataswayam-14/vervious.git
+cd vervious
+```
+
+### 2. **Copy environment variables**
+Create a `.env` file in each service.
+```env
+MONGO_URI=mongodb://mongo:27017/evently
+REDIS_URL=redis://redis:6379
+NATS_URL=nats://nats:4222
+JWT_SECRET=your_jwt_secret
+```
+
+### 3. **Build and start all services**
+```bash
+docker compose up --build
+```
+
+---
+
+### 4. **Access the platform**
+
+Here’s how the **Swagger UI** looks when running locally:
+
+![Swagger UI Preview](./assets/swagger-preview.png)
+
+---
+
+### 5. **Stop everything**
+```bash
+docker compose down
+```
