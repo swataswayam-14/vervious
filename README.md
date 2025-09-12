@@ -40,3 +40,74 @@ graph TB
     style EVENT_DB fill:#616161,stroke:#212121,stroke-width:2px,color:#ffffff
     style BOOKING_DB fill:#616161,stroke:#212121,stroke-width:2px,color:#ffffff
 ```
+
+
+## Request Flow
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Gateway as API Gateway
+    participant Broker as NATS Broker
+    participant Auth as Auth Service
+    participant Event as Event Service
+    participant Booking as Booking Service
+    participant DB as MongoDB/Redis
+
+    Client->>Gateway: HTTP Request (e.g., Create Booking)
+    Gateway->>Broker: Publish request (NATS Message)
+    Broker->>Booking: Forward message to Booking Service
+    Booking->>DB: Query/Update booking data
+    DB-->>Booking: Response with booking status
+    Booking->>Broker: Publish reply
+    Broker->>Gateway: Deliver response message
+    Gateway-->>Client: HTTP Response (JSON)
+```
+
+# Key Components
+
+## 1. **API Gateway**
+* Exposes REST APIs (`/auth`, `/events`, `/bookings`).
+* Validates requests (Zod).
+* Converts HTTP → NATS messages (request/reply).
+* Handles timeouts & response forwarding.
+
+## 2. **Auth Service**
+* User registration, login, refresh, logout.
+* JWT token management.
+* Circuit breaker ensures DB failures don't cascade.
+
+## 3. **Event Service**
+* Event CRUD (create, update, delete, deactivate).
+* Search events, list upcoming events.
+* Redis caching for frequently accessed data.
+* Cleanup of expired events.
+
+## 4. **Booking Service**
+* Ticket reservations, cancellations.
+* Capacity enforcement with Redis locks.
+* Expired booking cleanup jobs.
+* Idempotent booking operations.
+
+## 5. **NATS Message Broker**
+* Pub/Sub for domain events (e.g., `EventCreated`, `BookingConfirmed`).
+* Request/Reply for synchronous API calls.
+* Queue groups for load balancing across replicas.
+
+## Resilience & Reliability
+
+* **Circuit Breaker** - Each service wraps DB/Redis calls with a circuit breaker.
+   * Avoids hammering unavailable dependencies.
+   * Allows quick failover + recovery.
+
+* **Redis Distributed Locks**
+   * Prevents race conditions (e.g., two users booking the last ticket simultaneously).
+   * Ensures atomic operations on capacity-sensitive workflows.
+
+* **Caching**
+   * Event & booking data cached in Redis.
+   * TTL ensures cache freshness (30 mins default).
+
+* **Graceful Shutdowns**
+   * Services unsubscribe from NATS before exit.
+   * Prevents dangling consumers and message loss.
