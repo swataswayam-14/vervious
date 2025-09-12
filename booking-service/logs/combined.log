@@ -1,0 +1,340 @@
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T18:56:18.117Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T18:56:18.118Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T18:56:18.129Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-11T18:56:18.130Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-11T18:56:18.131Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T18:56:18.131Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-11T18:56:18.132Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-11T18:56:27.140Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T18:56:33.822Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T18:56:33.823Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T18:56:33.832Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-11T18:56:33.833Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-11T18:56:33.834Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T18:56:33.834Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-11T18:56:33.834Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-11T18:58:49.732Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T18:58:55.920Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T18:58:55.921Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T18:58:55.929Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-11T18:58:55.930Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-11T18:58:55.931Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T18:58:55.931Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-11T18:58:55.931Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:03:33.448Z"}
+{"level":"info","message":"Processing booking create request for event: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757617413445","service":"unknown","timestamp":"2025-09-11T19:03:33.448Z"}
+{"bookingData":{"eventId":"68c2d60fd1fb8ffde5ddd4b9","ticketQuantity":1,"totalAmount":250,"userId":"68c2d4642842eaaf3e7b07ad"},"error":{"code":20,"codeName":"IllegalOperation","errorLabelSet":{},"errorResponse":{"code":20,"codeName":"IllegalOperation","errmsg":"Transaction numbers are only allowed on a replica set member or mongos","ok":0},"ok":0},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-11T19:03:33.455Z"}
+{"error":"Transaction numbers are only allowed on a replica set member or mongos","level":"error","message":"Booking create handler error:","messageId":"1757617413445","service":"unknown","timestamp":"2025-09-11T19:03:33.455Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPPVF","service":"unknown","timestamp":"2025-09-11T19:03:33.456Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-11T19:06:33.730Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-11T19:06:33.735Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T19:06:39.321Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T19:06:39.322Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:06:39.335Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:06:39.335Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:06:39.335Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-11T19:06:39.335Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-11T19:06:39.335Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T19:06:39.336Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-11T19:06:39.337Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:06:45.304Z"}
+{"level":"info","message":"Processing booking create request for event: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757617605300","service":"unknown","timestamp":"2025-09-11T19:06:45.305Z"}
+{"bookingData":{"eventId":"68c2d60fd1fb8ffde5ddd4b9","ticketQuantity":1,"totalAmount":250,"userId":"68c2d4642842eaaf3e7b07ad"},"error":{},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-11T19:06:45.316Z"}
+{"error":"Event not found","level":"error","message":"Booking create handler error:","messageId":"1757617605300","service":"unknown","timestamp":"2025-09-11T19:06:45.316Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPQDR","service":"unknown","timestamp":"2025-09-11T19:06:45.317Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-11T19:09:23.189Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T19:09:28.309Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T19:09:28.310Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:09:28.318Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:09:28.318Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:09:28.318Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T19:09:28.319Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-11T19:09:28.320Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:09:33.849Z"}
+{"level":"info","message":"Processing booking create request for event: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757617773845","service":"unknown","timestamp":"2025-09-11T19:09:33.849Z"}
+{"bookingData":{"eventId":"68c2d60fd1fb8ffde5ddd4b9","ticketQuantity":1,"totalAmount":250,"userId":"68c2d4642842eaaf3e7b07ad"},"error":{},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-11T19:09:33.862Z"}
+{"error":"Event not found","level":"error","message":"Booking create handler error:","messageId":"1757617773845","service":"unknown","timestamp":"2025-09-11T19:09:33.862Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPQMX","service":"unknown","timestamp":"2025-09-11T19:09:33.863Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:12:15.051Z"}
+{"level":"info","message":"Processing booking create request for event: 68c31ec8afa421a852d9e860","messageId":"1757617935049","service":"unknown","timestamp":"2025-09-11T19:12:15.051Z"}
+{"bookingData":{"eventId":"68c31ec8afa421a852d9e860","ticketQuantity":1,"totalAmount":250,"userId":"68c2d4642842eaaf3e7b07ad"},"error":{},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-11T19:12:15.065Z"}
+{"error":"Invalid total amount","level":"error","message":"Booking create handler error:","messageId":"1757617935049","service":"unknown","timestamp":"2025-09-11T19:12:15.065Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPR59","service":"unknown","timestamp":"2025-09-11T19:12:15.066Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:12:22.584Z"}
+{"level":"info","message":"Processing booking create request for event: 68c31ec8afa421a852d9e860","messageId":"1757617942581","service":"unknown","timestamp":"2025-09-11T19:12:22.584Z"}
+{"bookingData":{"eventId":"68c31ec8afa421a852d9e860","ticketQuantity":1,"totalAmount":10,"userId":"68c2d4642842eaaf3e7b07ad"},"error":{},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-11T19:12:22.593Z"}
+{"error":"Invalid total amount","level":"error","message":"Booking create handler error:","messageId":"1757617942581","service":"unknown","timestamp":"2025-09-11T19:12:22.593Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPREF","service":"unknown","timestamp":"2025-09-11T19:12:22.593Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-11T19:12:32.636Z"}
+{"level":"info","message":"Processing booking create request for event: 68c31ec8afa421a852d9e860","messageId":"1757617952635","service":"unknown","timestamp":"2025-09-11T19:12:32.637Z"}
+{"bookingData":{"eventId":"68c31ec8afa421a852d9e860","ticketQuantity":1,"totalAmount":1,"userId":"68c2d4642842eaaf3e7b07ad"},"error":{},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-11T19:12:32.646Z"}
+{"error":"Invalid total amount","level":"error","message":"Booking create handler error:","messageId":"1757617952635","service":"unknown","timestamp":"2025-09-11T19:12:32.646Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPRNL","service":"unknown","timestamp":"2025-09-11T19:12:32.647Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-11T19:13:41.567Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T06:18:14.231Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T06:18:14.232Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:18:14.240Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:18:14.240Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:18:14.241Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T06:18:14.243Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:23:27.672Z"}
+{"level":"info","message":"Processing booking create request for event: 68c3bba0eb6fcbc2cb6a73dd","messageId":"1757658207668","service":"unknown","timestamp":"2025-09-12T06:23:27.673Z"}
+{"level":"info","message":"Received message from subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:23:27.696Z"}
+{"level":"info","message":"Processing capacity reserve request: 68c3bba0eb6fcbc2cb6a73dd","messageId":"1757658207692","quantity":1,"service":"unknown","timestamp":"2025-09-12T06:23:27.697Z"}
+{"error":"Transaction numbers are only allowed on a replica set member or mongos","level":"error","message":"Capacity reserve handler error:","messageId":"1757658207692","service":"unknown","timestamp":"2025-09-12T06:23:27.707Z"}
+{"level":"info","message":"Published message to subject: _INBOX.XJ43U8VA42P4MTS623UP13.XJ43U8VA42P4MTS623UOUN","service":"unknown","timestamp":"2025-09-12T06:23:27.708Z"}
+{"level":"info","message":"Recieved response from subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:23:27.710Z"}
+{"error":{},"level":"error","message":"Failed to reserve event capacity via NATS","service":"unknown","timestamp":"2025-09-12T06:23:27.710Z"}
+{"bookingData":{"eventId":"68c3bba0eb6fcbc2cb6a73dd","ticketQuantity":1,"totalAmount":1231,"userId":"68c3bb60c7ba00ce2c8068ef"},"error":{},"level":"error","message":"Error creating booking","service":"unknown","timestamp":"2025-09-12T06:23:27.711Z"}
+{"error":"Failed to reserve tickets","level":"error","message":"Booking create handler error:","messageId":"1757658207668","service":"unknown","timestamp":"2025-09-12T06:23:27.711Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T3KN","service":"unknown","timestamp":"2025-09-12T06:23:27.711Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T06:30:12.448Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T06:30:18.358Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T06:30:18.359Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:30:18.372Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:30:18.372Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:30:18.372Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:30:18.373Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T06:30:18.374Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:30:22.939Z"}
+{"level":"info","message":"Processing booking create request for event: 68c3bba0eb6fcbc2cb6a73dd","messageId":"1757658622935","service":"unknown","timestamp":"2025-09-12T06:30:22.940Z"}
+{"level":"info","message":"Received message from subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:30:22.961Z"}
+{"level":"info","message":"Processing capacity reserve request: 68c3bba0eb6fcbc2cb6a73dd","messageId":"1757658622958","quantity":1,"service":"unknown","timestamp":"2025-09-12T06:30:22.961Z"}
+{"level":"info","message":"Published message to subject: _INBOX.5JTKICX5D3JEYMQMQJ4NIG.5JTKICX5D3JEYMQMQJ4NH1","service":"unknown","timestamp":"2025-09-12T06:30:22.968Z"}
+{"level":"info","message":"Recieved response from subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:30:22.969Z"}
+{"level":"info","message":"Published message to subject: event.booking.created","service":"unknown","timestamp":"2025-09-12T06:30:22.986Z"}
+{"bookingId":"68c3bdfec26925fa7d8ca085","eventId":"68c3bba0eb6fcbc2cb6a73dd","level":"info","message":"Booking created successfully","service":"unknown","timestamp":"2025-09-12T06:30:22.986Z","userId":"68c3bb60c7ba00ce2c8068ef"}
+{"level":"info","message":"Booking created successfully: 68c3bdfec26925fa7d8ca085","messageId":"1757658622935","service":"unknown","timestamp":"2025-09-12T06:30:22.986Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T3PD","service":"unknown","timestamp":"2025-09-12T06:30:22.987Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T06:33:23.959Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T06:33:29.176Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T06:33:29.177Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T06:33:29.189Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T06:33:29.190Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:33:29.190Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:33:29.190Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:33:29.190Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T06:33:29.191Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T06:37:31.012Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T06:37:34.944Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T06:37:34.945Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:37:34.954Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:37:34.954Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:37:34.954Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:37:34.954Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T06:37:34.954Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T06:37:34.954Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T06:37:34.955Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T06:37:34.955Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T06:37:34.955Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:37:34.955Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:37:34.955Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:37:34.955Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T06:37:34.956Z"}
+{"level":"info","message":"Received message from subject: booking.get","service":"unknown","timestamp":"2025-09-12T06:38:24.017Z"}
+{"level":"info","message":"Processing get booking request: 68c3bdfec26925fa7d8ca085","messageId":"1757659104015","service":"unknown","timestamp":"2025-09-12T06:38:24.017Z"}
+{"level":"info","message":"Booking fetched successfully: 68c3bdfec26925fa7d8ca085","messageId":"1757659104015","service":"unknown","timestamp":"2025-09-12T06:38:24.040Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T3YT","service":"unknown","timestamp":"2025-09-12T06:38:24.041Z"}
+{"level":"info","message":"Received message from subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:39:26.202Z"}
+{"level":"info","message":"Processing booking cancellation request: 68c3bdfec26925fa7d8ca085","messageId":"1757659166201","service":"unknown","timestamp":"2025-09-12T06:39:26.203Z"}
+{"bookingId":"68c3bdfec26925fa7d8ca085","error":{"code":20,"codeName":"IllegalOperation","errorLabelSet":{},"errorResponse":{"code":20,"codeName":"IllegalOperation","errmsg":"Transaction numbers are only allowed on a replica set member or mongos","ok":0},"ok":0},"level":"error","message":"Error cancelling booking","service":"unknown","timestamp":"2025-09-12T06:39:26.210Z","userId":"68c3bb60c7ba00ce2c8068ef"}
+{"error":"Transaction numbers are only allowed on a replica set member or mongos","level":"error","message":"Booking cancel handler error:","messageId":"1757659166201","service":"unknown","timestamp":"2025-09-12T06:39:26.211Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T43J","service":"unknown","timestamp":"2025-09-12T06:39:26.211Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T06:41:38.168Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T06:41:38.171Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T06:41:42.586Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T06:41:42.587Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:41:42.599Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T06:41:42.600Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T06:41:42.601Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:41:42.601Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:41:42.601Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T06:41:42.601Z"}
+{"level":"info","message":"Received message from subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T06:41:47.821Z"}
+{"level":"info","message":"Processing booking cancellation request: 68c3bdfec26925fa7d8ca085","messageId":"1757659307818","service":"unknown","timestamp":"2025-09-12T06:41:47.822Z"}
+{"level":"info","message":"Received message from subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:41:47.848Z"}
+{"level":"info","message":"Processing capacity release request: 68c3bba0eb6fcbc2cb6a73dd","messageId":"1757659307845","quantity":1,"service":"unknown","timestamp":"2025-09-12T06:41:47.849Z"}
+{"error":"Transaction numbers are only allowed on a replica set member or mongos","level":"error","message":"Capacity release handler error:","messageId":"1757659307845","service":"unknown","timestamp":"2025-09-12T06:41:47.853Z"}
+{"level":"info","message":"Published message to subject: _INBOX.2XO0IWDOOVCLC5KPNHW90C.2XO0IWDOOVCLC5KPNHW8YU","service":"unknown","timestamp":"2025-09-12T06:41:47.854Z"}
+{"level":"info","message":"Recieved response from subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T06:41:47.855Z"}
+{"error":"Transaction numbers are only allowed on a replica set member or mongos","level":"warn","message":"Failed to release capacity via NATS","service":"unknown","timestamp":"2025-09-12T06:41:47.855Z"}
+{"level":"info","message":"Published message to subject: event.booking.cancelled","service":"unknown","timestamp":"2025-09-12T06:41:47.876Z"}
+{"bookingId":"68c3bdfec26925fa7d8ca085","eventId":"68c3bba0eb6fcbc2cb6a73dd","level":"info","message":"Booking cancelled successfully","service":"unknown","timestamp":"2025-09-12T06:41:47.877Z","userId":"68c3bb60c7ba00ce2c8068ef"}
+{"level":"info","message":"Booking cancelled successfully: 68c3bdfec26925fa7d8ca085","messageId":"1757659307818","service":"unknown","timestamp":"2025-09-12T06:41:47.877Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T489","service":"unknown","timestamp":"2025-09-12T06:41:47.878Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T06:43:09.084Z"}
+{"eventId":"68c3bba0eb6fcbc2cb6a73dd","level":"info","message":"Processing booking list request","messageId":"1757659389082","service":"unknown","timestamp":"2025-09-12T06:43:09.084Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T4CZ","service":"unknown","timestamp":"2025-09-12T06:43:09.106Z"}
+{"level":"info","message":"Received message from subject: booking.stats","service":"unknown","timestamp":"2025-09-12T06:43:41.635Z"}
+{"level":"info","message":"Processing booking statistics request","messageId":"1757659421634","service":"unknown","timestamp":"2025-09-12T06:43:41.636Z"}
+{"level":"info","message":"Booking statistics fetched successfully","messageId":"1757659421634","service":"unknown","timestamp":"2025-09-12T06:43:41.642Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T4HP","service":"unknown","timestamp":"2025-09-12T06:43:41.642Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T06:56:01.662Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T10:35:53.782Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T10:35:53.783Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:35:53.791Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:35:53.791Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T10:35:53.792Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T10:35:53.793Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T10:35:53.793Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-12T10:37:48.217Z"}
+{"level":"info","message":"Processing booking create request for event: 68c3f7d315850c94694447d3","messageId":"1757673468215","service":"unknown","timestamp":"2025-09-12T10:37:48.218Z"}
+{"error":"RedisClient is not defined","level":"error","message":"Booking create handler error:","messageId":"1757673468215","service":"unknown","timestamp":"2025-09-12T10:37:48.218Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5T1T","service":"unknown","timestamp":"2025-09-12T10:37:48.219Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T10:38:14.095Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-12T10:38:18.455Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T10:38:18.456Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:38:18.468Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T10:38:18.469Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-12T10:38:18.470Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T10:38:18.470Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-12T10:38:18.470Z"}
+{"level":"info","message":"Received message from subject: booking.create","service":"unknown","timestamp":"2025-09-12T10:38:23.668Z"}
+{"level":"info","message":"Processing booking create request for event: 68c3f7d315850c94694447d3","messageId":"1757673503665","service":"unknown","timestamp":"2025-09-12T10:38:23.669Z"}
+{"level":"info","message":"Received message from subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T10:38:23.700Z"}
+{"level":"info","message":"Processing capacity reserve request: 68c3f7d315850c94694447d3","messageId":"1757673503697","quantity":1,"service":"unknown","timestamp":"2025-09-12T10:38:23.701Z"}
+{"level":"info","message":"Published message to subject: _INBOX.XENGFZ1M9RUTZ7IH6K3TU8.XENGFZ1M9RUTZ7IH6K3TPY","service":"unknown","timestamp":"2025-09-12T10:38:23.709Z"}
+{"level":"info","message":"Recieved response from subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-12T10:38:23.711Z"}
+{"level":"info","message":"Published message to subject: event.booking.created","service":"unknown","timestamp":"2025-09-12T10:38:23.726Z"}
+{"bookingId":"68c3f81f9b7978e2ad3b85f4","eventId":"68c3f7d315850c94694447d3","level":"info","message":"Booking created successfully","service":"unknown","timestamp":"2025-09-12T10:38:23.726Z","userId":"68c3f7a054b24acf0212d5c1"}
+{"level":"info","message":"Booking created successfully: 68c3f81f9b7978e2ad3b85f4","messageId":"1757673503665","service":"unknown","timestamp":"2025-09-12T10:38:23.728Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5T4D","service":"unknown","timestamp":"2025-09-12T10:38:23.728Z"}
+{"level":"info","message":"Received message from subject: booking.stats","service":"unknown","timestamp":"2025-09-12T10:40:25.815Z"}
+{"level":"info","message":"Processing booking statistics request","messageId":"1757673625814","service":"unknown","timestamp":"2025-09-12T10:40:25.816Z"}
+{"level":"info","message":"Booking statistics fetched successfully","messageId":"1757673625814","service":"unknown","timestamp":"2025-09-12T10:40:25.822Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5T6X","service":"unknown","timestamp":"2025-09-12T10:40:25.822Z"}
+{"level":"info","message":"Received message from subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T10:44:15.715Z"}
+{"level":"info","message":"Processing payment confirmation: 68c3f81f9b7978e2ad3b85f4","messageId":"1757673855706","service":"unknown","timestamp":"2025-09-12T10:44:15.716Z"}
+{"level":"info","message":"Published message to subject: notification.booking-confirmation","service":"unknown","timestamp":"2025-09-12T10:44:15.720Z"}
+{"bookingId":"68c3f81f9b7978e2ad3b85f4","level":"info","message":"Booking payment confirmed","paymentTransactionId":"2aBugsdfj","service":"unknown","timestamp":"2025-09-12T10:44:15.720Z"}
+{"level":"info","message":"Payment confirmed successfully: 68c3f81f9b7978e2ad3b85f4","messageId":"1757673855706","service":"unknown","timestamp":"2025-09-12T10:44:15.720Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5T9H","service":"unknown","timestamp":"2025-09-12T10:44:15.720Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T10:45:23.385Z"}
+{"eventId":"68c3f7d315850c94694447d3","level":"info","message":"Processing booking list request","messageId":"1757673923384","service":"unknown","timestamp":"2025-09-12T10:45:23.386Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5TC1","service":"unknown","timestamp":"2025-09-12T10:45:23.404Z"}
+{"level":"info","message":"Received message from subject: booking.validate","service":"unknown","timestamp":"2025-09-12T10:48:20.541Z"}
+{"level":"info","message":"Processing booking validation request: 68c3f81f9b7978e2ad3b85f4","messageId":"1757674100539","service":"unknown","timestamp":"2025-09-12T10:48:20.541Z"}
+{"level":"info","message":"Booking validation completed: 68c3f81f9b7978e2ad3b85f4","messageId":"1757674100539","service":"unknown","timestamp":"2025-09-12T10:48:20.545Z","valid":true}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5TEL","service":"unknown","timestamp":"2025-09-12T10:48:20.546Z"}
+{"level":"info","message":"Received message from subject: booking.get","service":"unknown","timestamp":"2025-09-12T10:49:13.775Z"}
+{"level":"info","message":"Processing get booking request: 68c3f81f9b7978e2ad3b85f4","messageId":"1757674153772","service":"unknown","timestamp":"2025-09-12T10:49:13.775Z"}
+{"level":"info","message":"Booking fetched successfully: 68c3f81f9b7978e2ad3b85f4","messageId":"1757674153772","service":"unknown","timestamp":"2025-09-12T10:49:13.786Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5TH5","service":"unknown","timestamp":"2025-09-12T10:49:13.787Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T10:51:15.061Z"}
+{"level":"info","message":"Processing booking list request","messageId":"1757674275058","service":"unknown","timestamp":"2025-09-12T10:51:15.061Z","userId":"68c3f7a054b24acf0212d5c1"}
+{"level":"info","message":"Published message to subject: _INBOX.2BST58JK5UR8ZCWVK5CDD7.2BST58JK5UR8ZCWVK5CD8K","service":"unknown","timestamp":"2025-09-12T10:51:15.067Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T10:53:03.149Z"}
+{"level":"info","message":"Processing booking list request","messageId":"1757674383147","service":"unknown","timestamp":"2025-09-12T10:53:03.150Z"}
+{"error":"Either userId or eventId must be provided","level":"error","message":"Booking list handler error:","messageId":"1757674383147","service":"unknown","timestamp":"2025-09-12T10:53:03.150Z"}
+{"level":"info","message":"Published message to subject: _INBOX.2BST58JK5UR8ZCWVK5CDD7.2BST58JK5UR8ZCWVK5CDMH","service":"unknown","timestamp":"2025-09-12T10:53:03.150Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T10:54:56.827Z"}
+{"eventId":"68c3f7d315850c94694447d3","level":"info","message":"Processing booking list request","messageId":"1757674496826","service":"unknown","timestamp":"2025-09-12T10:54:56.827Z"}
+{"level":"info","message":"Published message to subject: _INBOX.2BST58JK5UR8ZCWVK5CDD7.2BST58JK5UR8ZCWVK5CDR4","service":"unknown","timestamp":"2025-09-12T10:54:56.834Z"}
+{"level":"info","message":"Cleaned up 0 expired bookings","service":"unknown","timestamp":"2025-09-12T11:08:18.552Z"}
+{"level":"info","message":"Expired bookings cleaned up via service","service":"unknown","timestamp":"2025-09-12T11:08:18.552Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T11:15:00.412Z"}
+{"eventId":"68c3f7d315850c94694447d3","level":"info","message":"Processing booking list request","messageId":"1757675700410","service":"unknown","timestamp":"2025-09-12T11:15:00.413Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI56VW","service":"unknown","timestamp":"2025-09-12T11:15:00.421Z"}
+{"level":"info","message":"Received message from subject: booking.list","service":"unknown","timestamp":"2025-09-12T11:15:13.164Z"}
+{"eventId":"68c3f7d315850c94694447d3","level":"info","message":"Processing booking list request","messageId":"1757675713162","service":"unknown","timestamp":"2025-09-12T11:15:13.165Z","userId":"68c3f7a054b24acf0212d5c1"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI574Q","service":"unknown","timestamp":"2025-09-12T11:15:13.173Z"}
+{"level":"info","message":"Received message from subject: booking.get","service":"unknown","timestamp":"2025-09-12T11:15:33.864Z"}
+{"level":"info","message":"Processing get booking request: 68c3f81f9b7978e2ad3b85f4","messageId":"1757675733861","service":"unknown","timestamp":"2025-09-12T11:15:33.864Z"}
+{"level":"info","message":"Booking fetched successfully: 68c3f81f9b7978e2ad3b85f4","messageId":"1757675733861","service":"unknown","timestamp":"2025-09-12T11:15:33.876Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI57DK","service":"unknown","timestamp":"2025-09-12T11:15:33.877Z"}
+{"level":"info","message":"Received message from subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T11:15:49.287Z"}
+{"level":"info","message":"Processing payment confirmation: 68c3f81f9b7978e2ad3b85f4","messageId":"1757675749284","service":"unknown","timestamp":"2025-09-12T11:15:49.287Z"}
+{"level":"info","message":"Published message to subject: notification.booking-confirmation","service":"unknown","timestamp":"2025-09-12T11:15:49.293Z"}
+{"bookingId":"68c3f81f9b7978e2ad3b85f4","level":"info","message":"Booking payment confirmed","paymentTransactionId":"txn_1234567890","service":"unknown","timestamp":"2025-09-12T11:15:49.293Z"}
+{"level":"info","message":"Payment confirmed successfully: 68c3f81f9b7978e2ad3b85f4","messageId":"1757675749284","service":"unknown","timestamp":"2025-09-12T11:15:49.294Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI57ME","service":"unknown","timestamp":"2025-09-12T11:15:49.294Z"}
+{"level":"info","message":"Received message from subject: booking.stats","service":"unknown","timestamp":"2025-09-12T11:15:56.751Z"}
+{"level":"info","message":"Processing booking statistics request","messageId":"1757675756749","service":"unknown","timestamp":"2025-09-12T11:15:56.752Z"}
+{"level":"info","message":"Booking statistics fetched successfully","messageId":"1757675756749","service":"unknown","timestamp":"2025-09-12T11:15:56.756Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI57V8","service":"unknown","timestamp":"2025-09-12T11:15:56.756Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T11:19:41.014Z"}

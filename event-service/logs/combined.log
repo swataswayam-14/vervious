@@ -1,0 +1,499 @@
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T08:16:29.878Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T08:16:29.897Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T08:16:29.897Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T08:16:29.908Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T08:16:29.911Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T08:16:29.911Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T08:16:29.911Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T08:16:29.911Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T08:16:29.911Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T08:16:29.912Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T08:26:52.758Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T08:30:18.514Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T08:30:18.588Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T08:30:18.588Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T08:30:18.602Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T08:30:18.606Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T08:30:18.606Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T08:30:18.606Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T08:30:18.606Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T08:30:18.606Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T08:30:18.607Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T09:14:07.373Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T09:14:14.453Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:14:14.472Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:14:14.472Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T09:14:14.486Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T09:14:14.490Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T09:14:14.490Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T09:14:14.490Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T09:14:14.490Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T09:14:14.491Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T09:18:36.860Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T09:21:03.157Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:21:03.237Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:21:03.238Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T09:21:03.250Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T09:21:03.253Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T09:21:03.254Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T09:21:03.254Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T09:21:03.254Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T09:21:03.254Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T09:21:03.254Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T09:21:03.255Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T09:21:03.255Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T09:21:03.255Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T09:21:03.255Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T09:21:03.255Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T09:21:03.255Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T09:40:24.854Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T09:43:01.525Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:43:01.558Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:43:01.558Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T09:43:01.576Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T09:43:01.579Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T09:43:01.579Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T09:43:01.579Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T09:43:01.579Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T09:43:01.579Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T09:43:01.580Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T09:43:01.580Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T09:43:01.580Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T09:43:01.580Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T09:43:01.580Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T09:43:01.580Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T09:43:01.581Z"}
+{"level":"info","message":"Auth service listening on port 3005","service":"unknown","timestamp":"2025-09-11T09:43:01.581Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T09:45:36.723Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T11:39:21.328Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:39:21.341Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:39:21.341Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T11:39:21.351Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T11:39:21.354Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T11:39:21.355Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T11:39:21.356Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T11:39:21.356Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T11:40:16.996Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T11:46:22.356Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T11:46:22.360Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T11:46:22.360Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:46:22.366Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:46:22.366Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T11:46:22.366Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T11:46:22.367Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T11:46:22.368Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T11:46:22.368Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T11:50:57.368Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T11:51:06.923Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T11:51:06.927Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T11:51:06.927Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:51:06.937Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:51:06.937Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T11:51:06.937Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T11:51:06.937Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T11:51:06.937Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T11:51:06.937Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T11:51:06.938Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T11:51:06.939Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-11T11:52:02.996Z"}
+{"level":"info","message":"Processing event create request: undefined","service":"unknown","timestamp":"2025-09-11T11:52:02.996Z"}
+{"error":"Missing required fields: name, venue, dateTime, or organizerId","level":"error","message":"Event create handler error:","service":"unknown","timestamp":"2025-09-11T11:52:02.996Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T11:52:31.891Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T11:53:33.016Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T11:53:33.021Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T11:53:33.021Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T11:53:33.028Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T11:53:33.030Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T11:53:33.030Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-11T13:51:53.342Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T13:51:53.345Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T13:51:53.346Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T13:51:53.354Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T13:51:53.354Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T13:51:53.355Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T13:51:53.356Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T13:51:53.356Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-11T13:54:35.803Z"}
+{"level":"info","message":"Processing event create request: tech society orientation","messageId":"1757598875801","service":"unknown","timestamp":"2025-09-11T13:54:35.804Z"}
+{"error":"Operation `events.findOne()` buffering timed out after 10000ms","level":"error","message":"Event create handler error:","messageId":"1757598875801","service":"unknown","timestamp":"2025-09-11T13:54:45.815Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWHKP","service":"unknown","timestamp":"2025-09-11T13:54:45.816Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:00:32.247Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:00:41.170Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:00:41.176Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:00:41.176Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:00:41.187Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:00:41.187Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:00:41.187Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:00:41.187Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:00:41.187Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:00:41.187Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:00:41.188Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:00:41.188Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:00:41.188Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:00:41.188Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:00:41.188Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:00:41.188Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:00:41.189Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:00:41.189Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-11T14:00:47.010Z"}
+{"level":"info","message":"Processing event create request: tech society orientation","messageId":"1757599247008","service":"unknown","timestamp":"2025-09-11T14:00:47.011Z"}
+{"eventId":"68c2d60fd1fb8ffde5ddd4b9","level":"info","message":"New event created: tech society orientation","organizerId":"68c2d4642842eaaf3e7b07ad","service":"unknown","timestamp":"2025-09-11T14:00:47.047Z"}
+{"level":"info","message":"Event created successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757599247008","service":"unknown","timestamp":"2025-09-11T14:00:47.049Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWHT2","service":"unknown","timestamp":"2025-09-11T14:00:47.050Z"}
+{"level":"info","message":"Received message from subject: event.list","service":"unknown","timestamp":"2025-09-11T14:01:30.726Z"}
+{"level":"info","message":"Processing event list request","messageId":"1757599290723","service":"unknown","timestamp":"2025-09-11T14:01:30.727Z"}
+{"level":"info","message":"Fetched 1 events","service":"unknown","timestamp":"2025-09-11T14:01:30.734Z"}
+{"level":"info","message":"Fetched 1 events successfully","messageId":"1757599290723","service":"unknown","timestamp":"2025-09-11T14:01:30.735Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWI1F","service":"unknown","timestamp":"2025-09-11T14:01:30.735Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:10:56.591Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757599856589","service":"unknown","timestamp":"2025-09-11T14:10:56.591Z"}
+{"error":"Cannot read properties of undefined (reading 'toString')","level":"error","message":"Get event handler error:","messageId":"1757599856589","service":"unknown","timestamp":"2025-09-11T14:10:56.593Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWI9S","service":"unknown","timestamp":"2025-09-11T14:10:56.593Z"}
+{"level":"info","message":"Received message from subject: event.list","service":"unknown","timestamp":"2025-09-11T14:11:13.404Z"}
+{"level":"info","message":"Processing event list request","messageId":"1757599873402","service":"unknown","timestamp":"2025-09-11T14:11:13.405Z"}
+{"level":"info","message":"Fetched 1 events","service":"unknown","timestamp":"2025-09-11T14:11:13.409Z"}
+{"level":"info","message":"Fetched 1 events successfully","messageId":"1757599873402","service":"unknown","timestamp":"2025-09-11T14:11:13.409Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWII5","service":"unknown","timestamp":"2025-09-11T14:11:13.409Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:13:16.976Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757599996974","service":"unknown","timestamp":"2025-09-11T14:13:16.976Z"}
+{"error":"Cannot read properties of undefined (reading 'toString')","level":"error","message":"Get event handler error:","messageId":"1757599996974","service":"unknown","timestamp":"2025-09-11T14:13:16.978Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWIQI","service":"unknown","timestamp":"2025-09-11T14:13:16.979Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:17:31.480Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:17:39.852Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:17:39.858Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:17:39.858Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:17:39.871Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:17:39.871Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:17:39.871Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:17:39.871Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:17:39.871Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:17:39.872Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:17:39.873Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:17:39.873Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:17:48.848Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600268844","service":"unknown","timestamp":"2025-09-11T14:17:48.849Z"}
+{"error":"event.dateTime.toISOString is not a function","level":"error","message":"Get event handler error:","messageId":"1757600268844","service":"unknown","timestamp":"2025-09-11T14:17:48.852Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWIYV","service":"unknown","timestamp":"2025-09-11T14:17:48.853Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:19:21.763Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:19:29.231Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:19:29.238Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:19:29.238Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:19:29.248Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:19:29.248Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:19:29.248Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:19:29.249Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:19:29.250Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:19:29.250Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:19:34.921Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600374918","service":"unknown","timestamp":"2025-09-11T14:19:34.922Z"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:260:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:19:34.925Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600374918","service":"unknown","timestamp":"2025-09-11T14:19:34.946Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWJ78","service":"unknown","timestamp":"2025-09-11T14:19:34.948Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:21:47.538Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:22:01.529Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:22:01.536Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:22:01.536Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:22:01.548Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:22:01.549Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:22:01.550Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:22:01.550Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:22:01.550Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:22:01.550Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:22:01.550Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:22:07.168Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600527164","service":"unknown","timestamp":"2025-09-11T14:22:07.169Z"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:261:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:22:07.172Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600527164","service":"unknown","timestamp":"2025-09-11T14:22:07.190Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWJFL","service":"unknown","timestamp":"2025-09-11T14:22:07.191Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:22:13.553Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600533551","service":"unknown","timestamp":"2025-09-11T14:22:13.553Z"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:261:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:22:13.557Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600533551","service":"unknown","timestamp":"2025-09-11T14:22:13.566Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWJNY","service":"unknown","timestamp":"2025-09-11T14:22:13.567Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:22:27.228Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600547225","service":"unknown","timestamp":"2025-09-11T14:22:27.229Z"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:261:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:22:27.232Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600547225","service":"unknown","timestamp":"2025-09-11T14:22:27.240Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWJWB","service":"unknown","timestamp":"2025-09-11T14:22:27.240Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:22:28.392Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600548390","service":"unknown","timestamp":"2025-09-11T14:22:28.393Z"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:261:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:22:28.396Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600548390","service":"unknown","timestamp":"2025-09-11T14:22:28.404Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWK4O","service":"unknown","timestamp":"2025-09-11T14:22:28.404Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:22:33.132Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600553130","service":"unknown","timestamp":"2025-09-11T14:22:33.133Z"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:261:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:22:33.135Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600553130","service":"unknown","timestamp":"2025-09-11T14:22:33.145Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWKD1","service":"unknown","timestamp":"2025-09-11T14:22:33.146Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:23:07.723Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:23:14.657Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:23:14.663Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:23:14.664Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:23:14.671Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:23:14.671Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:23:14.672Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:23:14.673Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:23:14.673Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:23:14.673Z"}
+{"level":"info","message":"Received message from subject: event.get","service":"unknown","timestamp":"2025-09-11T14:23:18.649Z"}
+{"level":"info","message":"Processing get event request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600598645","service":"unknown","timestamp":"2025-09-11T14:23:18.650Z"}
+{"availableTickets":50,"capacity":50,"category":"TECH","createdAt":"2025-09-11T14:00:47.042Z","dateTime":"2025-10-15T14:30:00.000Z","description":"All bits and bytes of the tech society","id":"68c2d60fd1fb8ffde5ddd4b9","isActive":true,"level":"info","message":"Cached event data: ","name":"tech society orientation","organizerId":"68c2d4642842eaaf3e7b07ad","price":1231,"service":"unknown","timestamp":"2025-09-11T14:23:18.654Z","updatedAt":"2025-09-11T14:00:47.042Z","venue":"IIIT BBSR"}
+{"level":"error","message":"Get cached event data error: \"[object Object]\" is not valid JSON","service":"unknown","stack":"SyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at EventService.getCachedEventData (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:262:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/services/event.service.js:127:25\n    at async CircuitBreaker.execute (file:///Users/swataswayamdash/Projects/event-app/event-service/dist/helpers/helpers.js:26:28)\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/handlers/nats.handler.js:154:27\n    at async file:///Users/swataswayamdash/Projects/event-app/event-service/dist/nats/client.js:116:25","timestamp":"2025-09-11T14:23:18.654Z"}
+{"level":"info","message":"Event fetched successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757600598645","service":"unknown","timestamp":"2025-09-11T14:23:18.671Z"}
+{"level":"info","message":"Published message to subject: _INBOX.EFABS2PN70PD7DTGZRWH3Z.EFABS2PN70PD7DTGZRWKLE","service":"unknown","timestamp":"2025-09-11T14:23:18.672Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:28:46.413Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:28:53.944Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:28:53.951Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:28:53.951Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:28:53.963Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:28:53.963Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:28:53.963Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:28:53.963Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:28:53.963Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:28:53.963Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:28:53.964Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:28:53.964Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:28:53.964Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:28:53.964Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:28:53.964Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:28:53.964Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:28:53.965Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:28:53.965Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T14:34:18.337Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T14:34:32.924Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T14:34:32.929Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T14:34:32.929Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:34:32.944Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T14:34:32.944Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T14:34:32.945Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T14:34:32.946Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T14:34:32.946Z"}
+{"level":"info","message":"Received message from subject: event.update","service":"unknown","timestamp":"2025-09-11T14:35:01.820Z"}
+{"level":"info","message":"Processing event update request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757601301817","service":"unknown","timestamp":"2025-09-11T14:35:01.821Z"}
+{"eventId":"68c2d60fd1fb8ffde5ddd4b9","level":"info","message":"Event updated: Tech Society Orientation (Updated)","service":"unknown","timestamp":"2025-09-11T14:35:01.838Z"}
+{"level":"info","message":"Event updated successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757601301817","service":"unknown","timestamp":"2025-09-11T14:35:01.841Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55HG","service":"unknown","timestamp":"2025-09-11T14:35:01.842Z"}
+{"level":"info","message":"Received message from subject: event.delete","service":"unknown","timestamp":"2025-09-11T14:35:27.821Z"}
+{"level":"info","message":"Processing event delete request: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757601327819","service":"unknown","timestamp":"2025-09-11T14:35:27.822Z"}
+{"eventId":"68c2d60fd1fb8ffde5ddd4b9","level":"info","message":"Event deleted: Tech Society Orientation (Updated)","service":"unknown","timestamp":"2025-09-11T14:35:27.834Z"}
+{"level":"info","message":"Event deleted successfully: 68c2d60fd1fb8ffde5ddd4b9","messageId":"1757601327819","service":"unknown","timestamp":"2025-09-11T14:35:27.836Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55JK","service":"unknown","timestamp":"2025-09-11T14:35:27.836Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-11T14:35:55.649Z"}
+{"level":"info","message":"Processing event create request: tech society orientation","messageId":"1757601355647","service":"unknown","timestamp":"2025-09-11T14:35:55.649Z"}
+{"eventId":"68c2de4bfffffa3010376c71","level":"info","message":"New event created: tech society orientation","organizerId":"68c2d4642842eaaf3e7b07ad","service":"unknown","timestamp":"2025-09-11T14:35:55.667Z"}
+{"level":"info","message":"Event created successfully: 68c2de4bfffffa3010376c71","messageId":"1757601355647","service":"unknown","timestamp":"2025-09-11T14:35:55.670Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55KM","service":"unknown","timestamp":"2025-09-11T14:35:55.670Z"}
+{"level":"info","message":"Received message from subject: event.search","service":"unknown","timestamp":"2025-09-11T14:37:14.406Z"}
+{"level":"info","message":"Processing event search request: tech","messageId":"1757601434404","service":"unknown","timestamp":"2025-09-11T14:37:14.407Z"}
+{"level":"info","message":"Search found 1 events for term: tech","service":"unknown","timestamp":"2025-09-11T14:37:14.414Z"}
+{"level":"info","message":"Search returned 1 events","messageId":"1757601434404","service":"unknown","timestamp":"2025-09-11T14:37:14.414Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55LO","service":"unknown","timestamp":"2025-09-11T14:37:14.414Z"}
+{"level":"info","message":"Received message from subject: event.search","service":"unknown","timestamp":"2025-09-11T14:37:23.795Z"}
+{"level":"info","message":"Processing event search request: music","messageId":"1757601443793","service":"unknown","timestamp":"2025-09-11T14:37:23.795Z"}
+{"level":"info","message":"Search found 0 events for term: music","service":"unknown","timestamp":"2025-09-11T14:37:23.799Z"}
+{"level":"info","message":"Search returned 0 events","messageId":"1757601443793","service":"unknown","timestamp":"2025-09-11T14:37:23.800Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55MQ","service":"unknown","timestamp":"2025-09-11T14:37:23.800Z"}
+{"level":"info","message":"Received message from subject: event.search","service":"unknown","timestamp":"2025-09-11T14:37:31.276Z"}
+{"level":"info","message":"Processing event search request: t","messageId":"1757601451274","service":"unknown","timestamp":"2025-09-11T14:37:31.277Z"}
+{"level":"info","message":"Search found 1 events for term: t","service":"unknown","timestamp":"2025-09-11T14:37:31.282Z"}
+{"level":"info","message":"Search returned 1 events","messageId":"1757601451274","service":"unknown","timestamp":"2025-09-11T14:37:31.282Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55NS","service":"unknown","timestamp":"2025-09-11T14:37:31.282Z"}
+{"level":"info","message":"Received message from subject: event.organizer","service":"unknown","timestamp":"2025-09-11T14:38:10.500Z"}
+{"level":"info","message":"Processing get events by organizer request: 68c2d4642842eaaf3e7b07ad","messageId":"1757601490498","service":"unknown","timestamp":"2025-09-11T14:38:10.501Z"}
+{"filters":{"organizerId":"68c2d4642842eaaf3e7b07ad"},"level":"info","message":"Fetched 1 events","service":"unknown","timestamp":"2025-09-11T14:38:10.506Z"}
+{"level":"info","message":"Found 1 events for organizer","messageId":"1757601490498","service":"unknown","timestamp":"2025-09-11T14:38:10.506Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55OU","service":"unknown","timestamp":"2025-09-11T14:38:10.507Z"}
+{"level":"info","message":"Expired events cleaned up via service","service":"unknown","timestamp":"2025-09-11T15:37:42.033Z"}
+{"level":"info","message":"Expired events cleaned up via service","service":"unknown","timestamp":"2025-09-11T16:37:41.448Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-11T17:02:48.348Z"}
+{"level":"info","message":"Processing event create request: cultural society orientation","messageId":"1757610168346","service":"unknown","timestamp":"2025-09-11T17:02:48.348Z"}
+{"eventId":"68c300b8fffffa3010376c7c","level":"info","message":"New event created: cultural society orientation","organizerId":"68c2d4642842eaaf3e7b07ad","service":"unknown","timestamp":"2025-09-11T17:02:48.359Z"}
+{"level":"info","message":"Event created successfully: 68c300b8fffffa3010376c7c","messageId":"1757610168346","service":"unknown","timestamp":"2025-09-11T17:02:48.362Z"}
+{"level":"info","message":"Published message to subject: _INBOX.BI3RQS4GUYI3ETEVNP55II.BI3RQS4GUYI3ETEVNP55QY","service":"unknown","timestamp":"2025-09-11T17:02:48.363Z"}
+{"level":"info","message":"Expired events cleaned up via service","service":"unknown","timestamp":"2025-09-11T17:37:41.575Z"}
+{"level":"info","message":"Expired events cleaned up via service","service":"unknown","timestamp":"2025-09-11T18:37:41.590Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T19:02:57.865Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-11T19:03:02.879Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-11T19:03:02.885Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-11T19:03:02.885Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:03:02.893Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:03:02.893Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-11T19:03:02.893Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-11T19:03:02.893Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-11T19:03:02.893Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-11T19:03:02.893Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-11T19:03:02.894Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-11T19:03:02.894Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-11T19:03:02.894Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-11T19:03:02.894Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-11T19:03:02.894Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T19:03:02.894Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-11T19:03:02.895Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-11T19:03:02.895Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-11T19:11:04.292Z"}
+{"level":"info","message":"Processing event create request: Tech Society Orientation (Updated)","messageId":"1757617864288","service":"unknown","timestamp":"2025-09-11T19:11:04.293Z"}
+{"eventId":"68c31ec8afa421a852d9e860","level":"info","message":"New event created: Tech Society Orientation (Updated)","organizerId":"68c2d4642842eaaf3e7b07ad","service":"unknown","timestamp":"2025-09-11T19:11:04.322Z"}
+{"level":"info","message":"Event created successfully: 68c31ec8afa421a852d9e860","messageId":"1757617864288","service":"unknown","timestamp":"2025-09-11T19:11:04.325Z"}
+{"level":"info","message":"Published message to subject: _INBOX.TOZS16WHQJ3HA0AY3QPQ4L.TOZS16WHQJ3HA0AY3QPQW3","service":"unknown","timestamp":"2025-09-11T19:11:04.326Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-11T19:13:39.540Z"}
+{"error":{"cause":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":540772,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"},"errorLabelSet":{},"message":"connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":540772,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"}},"level":"error","message":"Failed to start event service","service":"unknown","timestamp":"2025-09-12T06:16:21.240Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-12T06:18:26.880Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-12T06:18:26.887Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T06:18:26.887Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:18:26.896Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-12T06:18:26.897Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-12T06:18:26.898Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:18:26.898Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-12T06:18:26.898Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-12T06:18:26.898Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-12T06:20:16.646Z"}
+{"level":"info","message":"Processing event create request: tech society orientation","messageId":"1757658016644","service":"unknown","timestamp":"2025-09-12T06:20:16.647Z"}
+{"eventId":"68c3bba0eb6fcbc2cb6a73dd","level":"info","message":"New event created: tech society orientation","organizerId":"68c3bb60c7ba00ce2c8068ef","service":"unknown","timestamp":"2025-09-12T06:20:16.674Z"}
+{"level":"info","message":"Event created successfully: 68c3bba0eb6fcbc2cb6a73dd","messageId":"1757658016644","service":"unknown","timestamp":"2025-09-12T06:20:16.676Z"}
+{"level":"info","message":"Published message to subject: _INBOX.KLD0T1HHFMIZHGNUE5T3B7.KLD0T1HHFMIZHGNUE5T3FX","service":"unknown","timestamp":"2025-09-12T06:20:16.677Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-12T06:56:00.063Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-12T10:35:34.983Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-12T10:35:34.990Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-12T10:35:34.990Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:35:35.006Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:35:35.006Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T10:35:35.007Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-12T10:35:35.008Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-12T10:35:35.008Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-12T10:37:07.371Z"}
+{"level":"info","message":"Processing event create request: tech society orientation","messageId":"1757673427368","service":"unknown","timestamp":"2025-09-12T10:37:07.371Z"}
+{"eventId":"68c3f7d315850c94694447d3","level":"info","message":"New event created: tech society orientation","organizerId":"68c3f7a054b24acf0212d5c1","service":"unknown","timestamp":"2025-09-12T10:37:07.398Z"}
+{"level":"info","message":"Event created successfully: 68c3f7d315850c94694447d3","messageId":"1757673427368","service":"unknown","timestamp":"2025-09-12T10:37:07.401Z"}
+{"level":"info","message":"Published message to subject: _INBOX.05YRWOTUBBXMEIH0PN5SWP.05YRWOTUBBXMEIH0PN5SZ9","service":"unknown","timestamp":"2025-09-12T10:37:07.402Z"}
+{"level":"info","message":"Received message from subject: event.list","service":"unknown","timestamp":"2025-09-12T11:13:26.573Z"}
+{"level":"info","message":"Processing event list request","messageId":"1757675606571","service":"unknown","timestamp":"2025-09-12T11:13:26.573Z"}
+{"level":"info","message":"Fetched 1 events","service":"unknown","timestamp":"2025-09-12T11:13:26.582Z"}
+{"level":"info","message":"Fetched 1 events successfully","messageId":"1757675606571","service":"unknown","timestamp":"2025-09-12T11:13:26.582Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI565E","service":"unknown","timestamp":"2025-09-12T11:13:26.582Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-12T11:13:48.570Z"}
+{"level":"info","message":"Processing event create request: Tech Conference 2024","messageId":"1757675628568","service":"unknown","timestamp":"2025-09-12T11:13:48.570Z"}
+{"error":"Event date must be in the future","level":"error","message":"Event create handler error:","messageId":"1757675628568","service":"unknown","timestamp":"2025-09-12T11:13:48.572Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI56E8","service":"unknown","timestamp":"2025-09-12T11:13:48.573Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-12T11:14:02.728Z"}
+{"level":"info","message":"Processing event create request: Tech Conference 2024","messageId":"1757675642726","service":"unknown","timestamp":"2025-09-12T11:14:02.728Z"}
+{"eventId":"68c4007a15850c94694447d7","level":"info","message":"New event created: Tech Conference 2024","organizerId":"68c3f7a054b24acf0212d5c1","service":"unknown","timestamp":"2025-09-12T11:14:02.744Z"}
+{"level":"info","message":"Event created successfully: 68c4007a15850c94694447d7","messageId":"1757675642726","service":"unknown","timestamp":"2025-09-12T11:14:02.748Z"}
+{"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI56N2","service":"unknown","timestamp":"2025-09-12T11:14:02.748Z"}
+{"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-12T11:19:37.447Z"}

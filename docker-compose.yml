@@ -1,0 +1,92 @@
+version: "3.9"
+
+services:
+  # Infrastructure services
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  nats:
+    image: nats:latest
+    container_name: nats
+    ports:
+      - "4222:4222"
+      - "8222:8222" # optional monitoring UI
+      - "6222:6222"
+
+  # Application services
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - DB_NAME=auth_service
+      - REDIS_URL=redis://redis:6379
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - mongo
+      - redis
+      - nats
+      - auth-service
+      - event-service
+      - booking-service
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth-service
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - DB_NAME=auth_service
+      - REDIS_URL=redis://redis:6379
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - mongo
+      - redis
+      - nats
+
+  event-service:
+    build: ./event-service
+    container_name: event-service
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - DB_NAME=auth_service
+      - REDIS_URL=redis://redis:6379
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - mongo
+      - redis
+      - nats
+
+  booking-service:
+    build: ./booking-service
+    container_name: booking-service
+    ports:
+      - "3003:3003"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - DB_NAME=auth_service
+      - REDIS_URL=redis://redis:6379
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - mongo
+      - redis
+      - nats
+
+volumes:
+  mongo_data:

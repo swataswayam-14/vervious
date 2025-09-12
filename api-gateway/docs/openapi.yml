@@ -1,0 +1,1355 @@
+openapi: 3.0.3
+info:
+  title: Event Booking API Gateway
+  description: |
+    A comprehensive API for managing events, bookings, and user authentication.
+    This API uses NATS messaging for microservice communication and provides
+    endpoints for user registration, event management, and booking operations.
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@eventbooking.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:3000
+    description: Development server
+  - url: https://api.eventbooking.com
+    description: Production server
+
+paths:
+  /health:
+    get:
+      tags:
+        - Health
+      summary: Health check endpoint
+      description: Returns the current health status of the API and connected services
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+  /api/auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register a new user
+      description: Creates a new user account with email verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '400':
+          description: Validation failed or user already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: User login
+      description: Authenticates user credentials and returns access tokens
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/auth/refresh:
+    post:
+      tags:
+        - Authentication
+      summary: Refresh access token
+      description: Generates new access token using refresh token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshTokenRequest'
+      responses:
+        '200':
+          description: Token refreshed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RefreshTokenResponse'
+        '401':
+          description: Invalid refresh token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/auth/logout:
+    post:
+      tags:
+        - Authentication
+      summary: User logout
+      description: Invalidates the refresh token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LogoutRequest'
+      responses:
+        '200':
+          description: Logout successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: Invalid refresh token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/events:
+    get:
+      tags:
+        - Events
+      summary: List all events
+      description: Retrieves a list of all active events
+      responses:
+        '200':
+          description: Events retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventListResponse'
+        '400':
+          description: Failed to retrieve events
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    post:
+      tags:
+        - Events
+      summary: Create a new event
+      description: Creates a new event (Admin only)
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateEventRequest'
+      responses:
+        '201':
+          description: Event created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/events/{eventId}:
+    get:
+      tags:
+        - Events
+      summary: Get event by ID
+      description: Retrieves detailed information about a specific event
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The event ID
+      responses:
+        '200':
+          description: Event retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Invalid event ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Event not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    put:
+      tags:
+        - Events
+      summary: Update an event
+      description: Updates an existing event (Admin only)
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The event ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateEventRequest'
+      responses:
+        '200':
+          description: Event updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventResponse'
+        '400':
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    delete:
+      tags:
+        - Events
+      summary: Delete an event
+      description: Deletes an existing event (Admin only)
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The event ID
+      responses:
+        '200':
+          description: Event deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+        '400':
+          description: Failed to delete event
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/events/search/{searchTerm}:
+    get:
+      tags:
+        - Events
+      summary: Search events
+      description: Search events by name, description, or category
+      parameters:
+        - name: searchTerm
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Search term
+      responses:
+        '200':
+          description: Search completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventListResponse'
+        '400':
+          description: Invalid search term
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/events/organizer/{organizerId}:
+    get:
+      tags:
+        - Events
+      summary: Get events by organizer
+      description: Retrieves all events created by a specific organizer
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: organizerId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The organizer ID
+      responses:
+        '200':
+          description: Organizer events fetched successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventListResponse'
+        '400':
+          description: Invalid organizer ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings:
+    get:
+      tags:
+        - Bookings
+      summary: Get all bookings (Admin only)
+      description: Retrieves all bookings with optional filtering
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: eventId
+          in: query
+          schema:
+            type: string
+          description: Filter by event ID
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [confirmed, cancelled, pending]
+          description: Filter by booking status
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Page number for pagination
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          description: Number of items per page
+      responses:
+        '200':
+          description: Bookings retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingListResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+    post:
+      tags:
+        - Bookings
+      summary: Create a new booking
+      description: Creates a new booking for an event
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingRequest'
+      responses:
+        '201':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingResponse'
+        '400':
+          description: Validation failed or insufficient capacity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/my-bookings:
+    get:
+      tags:
+        - Bookings
+      summary: Get current user's bookings
+      description: Retrieves all bookings for the authenticated user
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: eventId
+          in: query
+          schema:
+            type: string
+          description: Filter by event ID
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [confirmed, cancelled, pending]
+          description: Filter by booking status
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Page number for pagination
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          description: Number of items per page
+      responses:
+        '200':
+          description: User bookings retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingListResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/{bookingId}:
+    get:
+      tags:
+        - Bookings
+      summary: Get booking by ID
+      description: Retrieves detailed information about a specific booking
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The booking ID
+      responses:
+        '200':
+          description: Booking retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingResponse'
+        '400':
+          description: Invalid booking ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Booking not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/{bookingId}/cancel:
+    put:
+      tags:
+        - Bookings
+      summary: Cancel a booking
+      description: Cancels an existing booking
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The booking ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingRequest'
+      responses:
+        '200':
+          description: Booking cancelled successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingResponse'
+        '400':
+          description: Failed to cancel booking
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/{bookingId}/validate:
+    post:
+      tags:
+        - Bookings
+      summary: Validate a booking (Admin only)
+      description: Validates a booking for event entry
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The booking ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValidateBookingRequest'
+      responses:
+        '200':
+          description: Booking validation completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingResponse'
+        '400':
+          description: Validation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/event/{eventId}:
+    get:
+      tags:
+        - Bookings
+      summary: Get bookings for an event (Admin only)
+      description: Retrieves all bookings for a specific event
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The event ID
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [confirmed, cancelled, pending]
+          description: Filter by booking status
+        - name: page
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Page number for pagination
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          description: Number of items per page
+      responses:
+        '200':
+          description: Event bookings retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingListResponse'
+        '400':
+          description: Invalid event ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/{bookingId}/confirm-payment:
+    post:
+      tags:
+        - Bookings
+      summary: Confirm booking payment (Admin only)
+      description: Confirms payment for a booking
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: bookingId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The booking ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfirmPaymentRequest'
+      responses:
+        '200':
+          description: Payment confirmed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingResponse'
+        '400':
+          description: Invalid payment information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/bookings/admin/stats:
+    get:
+      tags:
+        - Bookings
+      summary: Get booking statistics (Admin only)
+      description: Retrieves comprehensive booking statistics
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Booking statistics retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingStatsResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Forbidden - Admin access required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token obtained from login endpoint
+
+  schemas:
+    # Base Response Schemas
+    HealthResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: object
+          properties:
+            status:
+              type: string
+              example: "healthy"
+            timestamp:
+              type: string
+              format: date-time
+              example: "2024-01-15T10:30:00.000Z"
+            services:
+              type: object
+              properties:
+                nats:
+                  type: boolean
+                  example: true
+                redis:
+                  type: boolean
+                  example: true
+
+    SuccessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        message:
+          type: string
+          example: "Operation completed successfully"
+
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: string
+          example: "An error occurred"
+        data:
+          type: array
+          items:
+            type: object
+          description: Additional error details (validation errors, etc.)
+
+    # Authentication Schemas
+    RegisterRequest:
+      type: object
+      required:
+        - email
+        - password
+        - name
+        - role
+      properties:
+        email:
+          type: string
+          format: email
+          example: "user@example.com"
+        password:
+          type: string
+          minLength: 8
+          example: "password123"
+        name:
+          type: string
+          minLength: 2
+          maxLength: 100
+          example: "John Doe"
+        role:
+          type: string
+          enum: [user, admin]
+          example: "user"
+
+    LoginRequest:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          example: "user@example.com"
+        password:
+          type: string
+          example: "password123"
+
+    RefreshTokenRequest:
+      type: object
+      required:
+        - refreshToken
+      properties:
+        refreshToken:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+
+    LogoutRequest:
+      type: object
+      required:
+        - refreshToken
+      properties:
+        refreshToken:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        email:
+          type: string
+          format: email
+          example: "user@example.com"
+        name:
+          type: string
+          example: "John Doe"
+        role:
+          type: string
+          enum: [user, admin]
+          example: "user"
+        isActive:
+          type: boolean
+          example: true
+        lastLogin:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+        updatedAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+
+    AuthResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: object
+          properties:
+            user:
+              $ref: '#/components/schemas/User'
+            tokens:
+              type: object
+              properties:
+                accessToken:
+                  type: string
+                  example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                refreshToken:
+                  type: string
+                  example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        message:
+          type: string
+          example: "User registered successfully"
+
+    RefreshTokenResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: object
+          properties:
+            tokens:
+              type: object
+              properties:
+                accessToken:
+                  type: string
+                  example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                refreshToken:
+                  type: string
+                  example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        message:
+          type: string
+          example: "Token refreshed successfully"
+
+    # Event Schemas
+    CreateEventRequest:
+      type: object
+      required:
+        - name
+        - description
+        - venue
+        - dateTime
+        - capacity
+        - price
+        - category
+      properties:
+        name:
+          type: string
+          minLength: 1
+          example: "Tech Conference 2024"
+        description:
+          type: string
+          example: "Annual technology conference featuring latest innovations"
+        venue:
+          type: string
+          example: "Convention Center, Downtown"
+        dateTime:
+          type: string
+          format: date-time
+          example: "2024-06-15T09:00:00.000Z"
+        capacity:
+          type: integer
+          minimum: 1
+          example: 500
+        price:
+          type: number
+          minimum: 0
+          example: 99.99
+        category:
+          type: string
+          example: "Technology"
+
+    UpdateEventRequest:
+      type: object
+      properties:
+        updates:
+          type: object
+          properties:
+            name:
+              type: string
+              example: "Updated Event Name"
+            description:
+              type: string
+              example: "Updated description"
+            venue:
+              type: string
+              example: "New Venue Location"
+            dateTime:
+              type: string
+              format: date-time
+              example: "2024-06-15T09:00:00.000Z"
+            capacity:
+              type: integer
+              minimum: 1
+              example: 600
+            availableTickets:
+              type: integer
+              minimum: 0
+              example: 450
+            price:
+              type: number
+              minimum: 0
+              example: 89.99
+            category:
+              type: string
+              example: "Technology"
+            isActive:
+              type: boolean
+              example: true
+
+    Event:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "507f1f77bcf86cd799439012"
+        name:
+          type: string
+          example: "Tech Conference 2024"
+        description:
+          type: string
+          example: "Annual technology conference featuring latest innovations"
+        venue:
+          type: string
+          example: "Convention Center, Downtown"
+        dateTime:
+          type: string
+          format: date-time
+          example: "2024-06-15T09:00:00.000Z"
+        capacity:
+          type: integer
+          example: 500
+        availableTickets:
+          type: integer
+          example: 450
+        price:
+          type: number
+          example: 99.99
+        category:
+          type: string
+          example: "Technology"
+        organizerId:
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        isActive:
+          type: boolean
+          example: true
+        createdAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+        updatedAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+
+    EventResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          $ref: '#/components/schemas/Event'
+        message:
+          type: string
+          example: "Event retrieved successfully"
+
+    EventListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Event'
+        message:
+          type: string
+          example: "Events retrieved successfully"
+
+    # Booking Schemas
+    CreateBookingRequest:
+      type: object
+      required:
+        - eventId
+        - ticketQuantity
+        - totalAmount
+      properties:
+        eventId:
+          type: string
+          example: "507f1f77bcf86cd799439012"
+        ticketQuantity:
+          type: integer
+          minimum: 1
+          example: 2
+        totalAmount:
+          type: number
+          minimum: 0.01
+          example: 199.98
+        paymentMethod:
+          type: string
+          example: "credit_card"
+
+    CancelBookingRequest:
+      type: object
+      properties:
+        reason:
+          type: string
+          example: "Change in plans"
+
+    ValidateBookingRequest:
+      type: object
+      required:
+        - eventId
+      properties:
+        eventId:
+          type: string
+          example: "507f1f77bcf86cd799439012"
+
+    ConfirmPaymentRequest:
+      type: object
+      required:
+        - paymentTransactionId
+      properties:
+        paymentTransactionId:
+          type: string
+          example: "txn_1234567890"
+
+    Booking:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "507f1f77bcf86cd799439013"
+        eventId:
+          type: string
+          example: "507f1f77bcf86cd799439012"
+        userId:
+          type: string
+          example: "507f1f77bcf86cd799439011"
+        ticketQuantity:
+          type: integer
+          example: 2
+        totalAmount:
+          type: number
+          example: 199.98
+        status:
+          type: string
+          enum: [confirmed, cancelled, pending]
+          example: "confirmed"
+        bookingDate:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+        paymentStatus:
+          type: string
+          enum: [pending, completed, failed, refunded]
+          example: "completed"
+        paymentMethod:
+          type: string
+          example: "credit_card"
+        event:
+          type: object
+          properties:
+            name:
+              type: string
+              example: "Tech Conference 2024"
+            venue:
+              type: string
+              example: "Convention Center, Downtown"
+            dateTime:
+              type: string
+              format: date-time
+              example: "2024-06-15T09:00:00.000Z"
+        user:
+          type: object
+          properties:
+            name:
+              type: string
+              example: "John Doe"
+            email:
+              type: string
+              format: email
+              example: "john@example.com"
+        createdAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+        updatedAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00.000Z"
+
+    BookingResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          $ref: '#/components/schemas/Booking'
+        message:
+          type: string
+          example: "Booking retrieved successfully"
+
+    BookingListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Booking'
+        pagination:
+          type: object
+          properties:
+            page:
+              type: integer
+              example: 1
+            limit:
+              type: integer
+              example: 10
+            total:
+              type: integer
+              example: 100
+            pages:
+              type: integer
+              example: 10
+        message:
+          type: string
+          example: "Bookings retrieved successfully"
+
+    BookingStatsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        data:
+          type: object
+          properties:
+            totalBookings:
+              type: integer
+              example: 1500
+            confirmedBookings:
+              type: integer
+              example: 1200
+            cancelledBookings:
+              type: integer
+              example: 200
+            pendingBookings:
+              type: integer
+              example: 100
+            totalRevenue:
+              type: number
+              example: 150000.00
+            averageBookingValue:
+              type: number
+              example: 125.50
+            topEvents:
+              type: array
+              items:
+                type: object
+                properties:
+                  eventId:
+                    type: string
+                    example: "507f1f77bcf86cd799439012"
+                  eventName:
+                    type: string
+                    example: "Tech Conference 2024"
+                  bookingCount:
+                    type: integer
+                    example: 250
+                  revenue:
+                    type: number
+                    example: 24975.00
+            monthlyTrends:
+              type: array
+              items:
+                type: object
+                properties:
+                  month:
+                    type: string
+                    example: "2024-01"
+                  bookings:
+                    type: integer
+                    example: 120
+                  revenue:
+                    type: number
+                    example: 12000.00
+        message:
+          type: string
+          example: "Booking statistics retrieved successfully"
+
+tags:
+  - name: Health
+    description: Health check endpoints
+  - name: Authentication
+    description: User authentication and authorization
+  - name: Events
+    description: Event management operations
+  - name: Bookings
+    description: Booking management operations

@@ -1,0 +1,114 @@
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-11T06:04:27.734Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-11T06:04:27.739Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T06:04:27.757Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T06:04:27.758Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-11T06:04:27.758Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-11T06:04:27.759Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-11T06:04:34.260Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-11T07:21:02.092Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-11T07:21:02.098Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T07:21:02.112Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T07:21:02.113Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-11T07:21:02.113Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-11T07:21:02.114Z"}
+{"level":"info","message":"Processing register request for: dfga@gmail.com","messageId":"1757575815417","service":"unknown","timestamp":"2025-09-11T07:30:15.423Z"}
+{"level":"info","message":"New user registered: dfga@gmail.com","service":"unknown","timestamp":"2025-09-11T07:30:15.675Z","userId":"68c27a87d1e23a3d7b5d12ea"}
+{"level":"info","message":"User registered successfully: 68c27a87d1e23a3d7b5d12ea","messageId":"1757575815417","service":"unknown","timestamp":"2025-09-11T07:30:15.682Z"}
+{"level":"info","message":"Processing login request for: dfga@gmail.com","messageId":"1757575833811","service":"unknown","timestamp":"2025-09-11T07:30:33.813Z"}
+{"level":"info","message":"User logged in: dfga@gmail.com","service":"unknown","timestamp":"2025-09-11T07:30:34.059Z","userId":"68c27a87d1e23a3d7b5d12ea"}
+{"level":"info","message":"User logged in successfully: 68c27a87d1e23a3d7b5d12ea","messageId":"1757575833811","service":"unknown","timestamp":"2025-09-11T07:30:34.066Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-11T07:30:58.936Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-11T08:11:54.240Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-11T08:11:54.246Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T08:11:54.272Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T08:11:54.272Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-11T08:11:54.273Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-11T08:11:54.274Z"}
+{"level":"info","message":"Processing login request for: dfga@gmail.com","messageId":"1757578598516","service":"unknown","timestamp":"2025-09-11T08:16:38.520Z"}
+{"level":"info","message":"User logged in: dfga@gmail.com","service":"unknown","timestamp":"2025-09-11T08:16:38.751Z","userId":"68c27a87d1e23a3d7b5d12ea"}
+{"level":"info","message":"User logged in successfully: 68c27a87d1e23a3d7b5d12ea","messageId":"1757578598516","service":"unknown","timestamp":"2025-09-11T08:16:38.763Z"}
+{"level":"info","message":"Processing register request for: email1@gmailc.com","messageId":"1757579339677","service":"unknown","timestamp":"2025-09-11T08:28:59.680Z"}
+{"level":"info","message":"New user registered: email1@gmailc.com","service":"unknown","timestamp":"2025-09-11T08:28:59.913Z","userId":"68c2884b477c2538f065f238"}
+{"level":"info","message":"User registered successfully: 68c2884b477c2538f065f238","messageId":"1757579339677","service":"unknown","timestamp":"2025-09-11T08:28:59.917Z"}
+{"level":"info","message":"Processing login request for: email1@gmailc.com","messageId":"1757579667084","service":"unknown","timestamp":"2025-09-11T08:34:27.086Z"}
+{"level":"info","message":"User logged in: email1@gmailc.com","service":"unknown","timestamp":"2025-09-11T08:34:27.313Z","userId":"68c2884b477c2538f065f238"}
+{"level":"info","message":"User logged in successfully: 68c2884b477c2538f065f238","messageId":"1757579667084","service":"unknown","timestamp":"2025-09-11T08:34:27.320Z"}
+{"level":"info","message":"Processing login request for: email1@gmailc.com","messageId":"1757580512922","service":"unknown","timestamp":"2025-09-11T08:48:32.924Z"}
+{"level":"info","message":"User logged in: email1@gmailc.com","service":"unknown","timestamp":"2025-09-11T08:48:33.150Z","userId":"68c2884b477c2538f065f238"}
+{"level":"info","message":"User logged in successfully: 68c2884b477c2538f065f238","messageId":"1757580512922","service":"unknown","timestamp":"2025-09-11T08:48:33.157Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-11T09:07:59.709Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-11T09:20:45.575Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-11T09:20:45.582Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T09:20:45.592Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T09:20:45.592Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-11T09:20:45.592Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-11T09:20:45.594Z"}
+{"level":"info","message":"Processing login request for: email1@gmailc.com","messageId":"1757583860393","service":"unknown","timestamp":"2025-09-11T09:44:20.395Z"}
+{"level":"info","message":"User logged in: email1@gmailc.com","service":"unknown","timestamp":"2025-09-11T09:44:20.637Z","userId":"68c2884b477c2538f065f238"}
+{"level":"info","message":"User logged in successfully: 68c2884b477c2538f065f238","messageId":"1757583860393","service":"unknown","timestamp":"2025-09-11T09:44:20.648Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-11T09:45:49.445Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-11T13:51:48.492Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-11T13:51:48.499Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T13:51:48.507Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T13:51:48.508Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-11T13:51:48.508Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-11T13:51:48.509Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757598777712","service":"unknown","timestamp":"2025-09-11T13:52:57.718Z"}
+{"error":"Invalid email or password","level":"error","message":"Login handler error:","messageId":"1757598777712","service":"unknown","timestamp":"2025-09-11T13:52:57.732Z"}
+{"level":"info","message":"Processing register request for: billu@gmail.com","messageId":"1757598819971","service":"unknown","timestamp":"2025-09-11T13:53:39.973Z"}
+{"level":"info","message":"New user registered: billu@gmail.com","service":"unknown","timestamp":"2025-09-11T13:53:40.222Z","userId":"68c2d4642842eaaf3e7b07ad"}
+{"level":"info","message":"User registered successfully: 68c2d4642842eaaf3e7b07ad","messageId":"1757598819971","service":"unknown","timestamp":"2025-09-11T13:53:40.230Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757600748459","service":"unknown","timestamp":"2025-09-11T14:25:48.461Z"}
+{"level":"info","message":"User logged in: billu@gmail.com","service":"unknown","timestamp":"2025-09-11T14:25:48.706Z","userId":"68c2d4642842eaaf3e7b07ad"}
+{"level":"info","message":"User logged in successfully: 68c2d4642842eaaf3e7b07ad","messageId":"1757600748459","service":"unknown","timestamp":"2025-09-11T14:25:48.712Z"}
+{"address":"localhost:27017","beforeHandshake":false,"cause":{"beforeHandshake":false,"errorLabelSet":{}},"errorLabelSet":{},"level":"error","message":"Token cleanup error: Connection to localhost:27017 interrupted due to server monitor timeout","service":"unknown","stack":"PoolClearedOnNetworkError: Connection to localhost:27017 interrupted due to server monitor timeout\n    at ConnectionPool.interruptInUseConnections (/Users/swataswayamdash/Projects/event-app/auth-service/node_modules/mongodb/lib/cmap/connection_pool.js:253:36)\n    at /Users/swataswayamdash/Projects/event-app/auth-service/node_modules/mongodb/lib/cmap/connection_pool.js:241:41\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-09-11T15:06:02.735Z"}
+{"level":"info","message":"Expired tokens cleaned up","service":"unknown","timestamp":"2025-09-11T15:06:02.735Z"}
+{"level":"info","message":"Expired tokens cleaned up","service":"unknown","timestamp":"2025-09-11T16:06:02.538Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757610095002","service":"unknown","timestamp":"2025-09-11T17:01:35.004Z"}
+{"level":"info","message":"User logged in: billu@gmail.com","service":"unknown","timestamp":"2025-09-11T17:01:35.252Z","userId":"68c2d4642842eaaf3e7b07ad"}
+{"level":"info","message":"User logged in successfully: 68c2d4642842eaaf3e7b07ad","messageId":"1757610095002","service":"unknown","timestamp":"2025-09-11T17:01:35.259Z"}
+{"level":"info","message":"Expired tokens cleaned up","service":"unknown","timestamp":"2025-09-11T17:06:02.700Z"}
+{"address":"localhost:27017","beforeHandshake":false,"cause":{"beforeHandshake":false,"errorLabelSet":{}},"errorLabelSet":{},"level":"error","message":"Token cleanup error: Connection to localhost:27017 interrupted due to server monitor timeout","service":"unknown","stack":"PoolClearedOnNetworkError: Connection to localhost:27017 interrupted due to server monitor timeout\n    at ConnectionPool.interruptInUseConnections (/Users/swataswayamdash/Projects/event-app/auth-service/node_modules/mongodb/lib/cmap/connection_pool.js:253:36)\n    at /Users/swataswayamdash/Projects/event-app/auth-service/node_modules/mongodb/lib/cmap/connection_pool.js:241:41\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-09-11T18:20:25.955Z"}
+{"level":"info","message":"Expired tokens cleaned up","service":"unknown","timestamp":"2025-09-11T18:20:25.955Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757617176801","service":"unknown","timestamp":"2025-09-11T18:59:36.804Z"}
+{"level":"info","message":"User logged in: billu@gmail.com","service":"unknown","timestamp":"2025-09-11T18:59:37.052Z","userId":"68c2d4642842eaaf3e7b07ad"}
+{"level":"info","message":"User logged in successfully: 68c2d4642842eaaf3e7b07ad","messageId":"1757617176801","service":"unknown","timestamp":"2025-09-11T18:59:37.059Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-11T19:02:49.014Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-11T19:02:54.007Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-11T19:02:54.013Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-11T19:02:54.024Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-11T19:02:54.025Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-11T19:02:54.025Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-11T19:02:54.026Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-11T19:13:37.486Z"}
+{"cause":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":539861,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"},"errorLabelSet":{},"level":"error","message":"Failed to start auth service: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":539861,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"},"service":"unknown","stack":"MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (/Users/swataswayamdash/Projects/event-app/auth-service/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/Users/swataswayamdash/Projects/event-app/auth-service/node_modules/mongoose/lib/connection.js:1096:11)\n    at async DatabaseConnection.connect (file:///Users/swataswayamdash/Projects/event-app/auth-service/dist/utils/database.js:17:13)\n    at async startServer (file:///Users/swataswayamdash/Projects/event-app/auth-service/dist/app.js:44:9)","timestamp":"2025-09-12T06:16:20.334Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-12T06:18:22.214Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-12T06:18:22.221Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T06:18:22.229Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T06:18:22.229Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-12T06:18:22.229Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-12T06:18:22.230Z"}
+{"level":"info","message":"Processing register request for: billu@gmail.com","messageId":"1757657952131","service":"unknown","timestamp":"2025-09-12T06:19:12.136Z"}
+{"level":"info","message":"New user registered: billu@gmail.com","service":"unknown","timestamp":"2025-09-12T06:19:12.372Z","userId":"68c3bb60c7ba00ce2c8068ef"}
+{"level":"info","message":"User registered successfully: 68c3bb60c7ba00ce2c8068ef","messageId":"1757657952131","service":"unknown","timestamp":"2025-09-12T06:19:12.380Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757658893577","service":"unknown","timestamp":"2025-09-12T06:34:53.580Z"}
+{"level":"info","message":"User logged in: billu@gmail.com","service":"unknown","timestamp":"2025-09-12T06:34:53.827Z","userId":"68c3bb60c7ba00ce2c8068ef"}
+{"level":"info","message":"User logged in successfully: 68c3bb60c7ba00ce2c8068ef","messageId":"1757658893577","service":"unknown","timestamp":"2025-09-12T06:34:53.834Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-12T06:55:58.606Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-12T10:35:44.810Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-12T10:35:44.817Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-12T10:35:44.827Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-12T10:35:44.828Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-12T10:35:44.828Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-12T10:35:44.829Z"}
+{"level":"info","message":"Processing register request for: billu@gmail.com","messageId":"1757673376728","service":"unknown","timestamp":"2025-09-12T10:36:16.732Z"}
+{"level":"info","message":"New user registered: billu@gmail.com","service":"unknown","timestamp":"2025-09-12T10:36:16.967Z","userId":"68c3f7a054b24acf0212d5c1"}
+{"level":"info","message":"User registered successfully: 68c3f7a054b24acf0212d5c1","messageId":"1757673376728","service":"unknown","timestamp":"2025-09-12T10:36:16.975Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757674354093","service":"unknown","timestamp":"2025-09-12T10:52:34.096Z"}
+{"level":"info","message":"User logged in: billu@gmail.com","service":"unknown","timestamp":"2025-09-12T10:52:34.344Z","userId":"68c3f7a054b24acf0212d5c1"}
+{"level":"info","message":"User logged in successfully: 68c3f7a054b24acf0212d5c1","messageId":"1757674354093","service":"unknown","timestamp":"2025-09-12T10:52:34.351Z"}
+{"level":"info","message":"Processing login request for: billu@gmail.com","messageId":"1757675583728","service":"unknown","timestamp":"2025-09-12T11:13:03.733Z"}
+{"level":"info","message":"User logged in: billu@gmail.com","service":"unknown","timestamp":"2025-09-12T11:13:03.962Z","userId":"68c3f7a054b24acf0212d5c1"}
+{"level":"info","message":"User logged in successfully: 68c3f7a054b24acf0212d5c1","messageId":"1757675583728","service":"unknown","timestamp":"2025-09-12T11:13:03.969Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-12T11:19:42.680Z"}
+{"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-12T11:19:42.684Z"}
