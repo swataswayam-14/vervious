@@ -152,6 +152,10 @@ docker compose up --build
 
 > **Note:** Swagger UI is only visible when running locally at `http://localhost:3000/docs`. It does not show in production due to CORS restrictions. Run it locally using `docker compose up` to explore all API routes.
 
+Here's how the **Swagger UI** looks when running locally:
+
+![Swagger UI Preview](./assets/swagger-preview.png)
+
 For complete API route details and documentation, see [API\_DOCUMENTATION.md](./API_DOCUMENTATION.md) in the root directory.
 
 5. Stop everything
