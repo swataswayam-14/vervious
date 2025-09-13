@@ -122,8 +122,12 @@ export class ApiGateway {
         customfavIcon: "/favicon.ico",
       };
 
-      this.app.use('/docs', swaggerUi.serve);
-      this.app.get('/docs', swaggerUi.setup(swaggerDocument, swaggerOptions));
+      this.app.use(
+        '/docs',
+        swaggerUi.serve,
+        swaggerUi.setup(swaggerDocument, swaggerOptions)
+      );
+      //this.app.get('/docs', swaggerUi.setup(swaggerDocument, swaggerOptions));
 
       this.app.get('/docs/json', (req, res) => {
         res.setHeader('Content-Type', 'application/json');
@@ -151,8 +155,8 @@ export class ApiGateway {
       },
       servers: [
         {
-          url: `http://localhost:${this.port}`,
-          description: 'Development server',
+          url: `135.235.247.214:${this.port}`,
+          description: 'Production server',
         },
       ],
       paths: {
