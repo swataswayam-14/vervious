@@ -55,6 +55,7 @@ export class ApiGateway {
       cors({
         origin: process.env.ALLOWED_ORIGINS?.split(',') || [
           'http://localhost:3000',
+          'http://135.235.247.214:3000',
         ],
         credentials: true,
       })
