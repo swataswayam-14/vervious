@@ -28,7 +28,7 @@ export class ApiGateway {
 
   constructor() {
     this.app = express();
-    this.port = parseInt(process.env.PORT || '3000');
+    this.port = parseInt(process.env.PORT || '443');
     this.redisClient = new RedisClient(process.env.REDIS_URL);
 
     this.setupMiddleware();
@@ -50,12 +50,15 @@ export class ApiGateway {
 
   private setupMiddleware(): void {
     this.app.use(helmet());
+    this.app.disable('cross-origin-opener-policy');
+    this.app.disable('cross-origin-embedder-policy');
+
 
     this.app.use(
       cors({
         origin: process.env.ALLOWED_ORIGINS?.split(',') || [
-          'http://localhost:3000',
-          'http://135.235.247.214:3000',
+          'http://localhost:443',
+          'http://135.235.247.214:443',
         ],
         credentials: true,
       })
