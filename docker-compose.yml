@@ -1,3 +1,4 @@
+
 version: "3.9"
 
 services:
@@ -26,7 +27,7 @@ services:
 
   # Application services
   api-gateway:
-    build: ./api-gateway
+    image: swayam14/api-gateway:latest
     container_name: api-gateway
     ports:
       - "3000:3000"
@@ -43,8 +44,9 @@ services:
       - event-service
       - booking-service
 
+
   auth-service:
-    build: ./auth-service
+    image: swayam14/auth-service:latest
     container_name: auth-service
     ports:
       - "3001:3001"
@@ -59,7 +61,7 @@ services:
       - nats
 
   event-service:
-    build: ./event-service
+    image: swayam14/event-service:latest
     container_name: event-service
     ports:
       - "3002:3002"
@@ -74,7 +76,7 @@ services:
       - nats
 
   booking-service:
-    build: ./booking-service
+    image: swayam14/booking-service:latest
     container_name: booking-service
     ports:
       - "3003:3003"
