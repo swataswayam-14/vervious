@@ -50,29 +50,55 @@ export class ApiGateway {
 
   private setupMiddleware(): void {
     this.app.use(
-      helmet({
-        contentSecurityPolicy: {
-          directives: {
-            defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", "'unsafe-inline'"], 
-            styleSrc: ["'self'", "'unsafe-inline'"],  
-            imgSrc: ["'self'", "data:", "https:"],
-          },
-        },
-      })
-    );
-
-    this.app.disable('cross-origin-opener-policy');
-    this.app.disable('cross-origin-embedder-policy');
-
-
-    this.app.use(
       cors({
         origin: process.env.ALLOWED_ORIGINS?.split(',') || [
           'http://localhost:3000',
           'http://135.235.247.214:443',
+          'http://135.235.247.214',
         ],
         credentials: true,
+      })
+    );
+
+    this.app.use(
+      helmet({
+        contentSecurityPolicy: {
+          directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: [
+              "'self'", 
+              "'unsafe-inline'", 
+              "'unsafe-eval'",
+              "http://135.235.247.214:443",
+              "http://135.235.247.214",
+            ],
+            styleSrc: [
+              "'self'", 
+              "'unsafe-inline'",
+              "http://135.235.247.214:443",
+              "http://135.235.247.214",
+            ],
+            imgSrc: [
+              "'self'", 
+              "data:", 
+              "http:",
+              "http://135.235.247.214:443",
+              "http://135.235.247.214",
+            ],
+            connectSrc: [
+              "'self'",
+              "http://135.235.247.214:443",
+              "http://135.235.247.214",
+            ],
+            fontSrc: [
+              "'self'",
+              "http://135.235.247.214:443",
+              "http://135.235.247.214",
+            ],
+          },
+        },
+        crossOriginOpenerPolicy: false, 
+        crossOriginEmbedderPolicy: false, 
       })
     );
 
@@ -119,6 +145,7 @@ export class ApiGateway {
           filter: true,
           showExtensions: true,
           showCommonExtensions: true,
+          url: `http://135.235.247.214:443/docs/json`,
         },
         customCss: `
           .swagger-ui .topbar { display: none }
@@ -129,25 +156,40 @@ export class ApiGateway {
         customfavIcon: "/favicon.ico",
       };
 
+      this.app.use('/docs', (req, res, next) => {
+        res.removeHeader('Content-Security-Policy');
+        res.removeHeader('Cross-Origin-Opener-Policy');
+        res.removeHeader('Cross-Origin-Embedder-Policy');
+        res.removeHeader('Origin-Agent-Cluster');
+        
+        res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+        res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        
+        next();
+      });
+
       this.app.use(
         '/docs',
         swaggerUi.serve,
         swaggerUi.setup(swaggerDocument, swaggerOptions)
       );
-      this.app.use('/docs', (req, res, next) => {
-        res.removeHeader('Content-Security-Policy');
-        next();
-      });
-      //this.app.get('/docs', swaggerUi.setup(swaggerDocument, swaggerOptions));
 
       this.app.get('/docs/json', (req, res) => {
+        res.removeHeader('Content-Security-Policy');
         res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.send(swaggerDocument);
       });
 
       this.app.get('/docs/yaml', (req, res) => {
+        res.removeHeader('Content-Security-Policy');
         res.setHeader('Content-Type', 'application/x-yaml');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.send(yaml.stringify(swaggerDocument));
+      });
+
+      this.app.get('/favicon.ico', (req, res) => {
+        res.status(204).send();
       });
 
       logger.info('Swagger documentation setup complete at /docs');
@@ -166,7 +208,7 @@ export class ApiGateway {
       },
       servers: [
         {
-          url: `135.235.247.214:${this.port}`,
+          url: `http://135.235.247.214:443`, 
           description: 'Production server',
         },
       ],
@@ -220,7 +262,6 @@ export class ApiGateway {
   }
 
   private setupRoutes(): void {
-    // Health check
     this.app.get('/health', (req, res) => {
       const natsClient = getNatsClient();
       const response: ApiResponse = {
@@ -281,9 +322,9 @@ export class ApiGateway {
 
       this.app.listen(this.port, () => {
         logger.info(`API Gateway started on port ${this.port}`);
-        logger.info(`API Documentation available at http://localhost:${this.port}/docs`);
-        logger.info(`Health check available at http://localhost:${this.port}/health`);
-        logger.info(`OpenAPI spec available at http://localhost:${this.port}/docs/json`);
+        logger.info(`API Documentation available at http://135.235.247.214:${this.port}/docs`);
+        logger.info(`Health check available at http://135.235.247.214:${this.port}/health`);
+        logger.info(`OpenAPI spec available at http://135.235.247.214:${this.port}/docs/json`);
       });
 
       process.on('SIGTERM', async () => {
