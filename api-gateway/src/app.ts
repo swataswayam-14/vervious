@@ -49,7 +49,19 @@ export class ApiGateway {
   }
 
   private setupMiddleware(): void {
-    this.app.use(helmet());
+    this.app.use(
+      helmet({
+        contentSecurityPolicy: {
+          directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'", "'unsafe-inline'"], 
+            styleSrc: ["'self'", "'unsafe-inline'"],  
+            imgSrc: ["'self'", "data:", "https:"],
+          },
+        },
+      })
+    );
+
     this.app.disable('cross-origin-opener-policy');
     this.app.disable('cross-origin-embedder-policy');
 
