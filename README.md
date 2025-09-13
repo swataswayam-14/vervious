@@ -119,39 +119,45 @@ sequenceDiagram
 - [Docker](https://docs.docker.com/get-docker/) installed  
 - [Docker Compose](https://docs.docker.com/compose/install/) installed  
 
-## Steps
+---
 
-### 1. **Clone the repository**
+## Setup Instructions
+
+**Steps:**
+
+1. Clone the repository
+
 ```bash
 git clone https://github.com/swataswayam-14/vervious.git
 cd vervious
 ```
 
-### 2. **Copy environment variables**
-Create a `.env` file in each service.
-```env
+2. Copy environment variables
+   Create a `.env` file in each service with the following:
+
+```
 MONGO_URI=mongodb://mongo:27017/evently
 REDIS_URL=redis://redis:6379
 NATS_URL=nats://nats:4222
 JWT_SECRET=your_jwt_secret
 ```
 
-### 3. **Build and start all services**
+3. Build and start all services
+
 ```bash
 docker compose up --build
 ```
 
----
+4. Access the platform
 
-### 4. **Access the platform**
+> **Note:** Swagger UI is only visible when running locally at `http://localhost:3000/docs`. It does not show in production due to CORS restrictions. Run it locally using `docker compose up` to explore all API routes.
 
-Here’s how the **Swagger UI** looks when running locally:
+For complete API route details and documentation, see [API\_DOCUMENTATION.md](./API_DOCUMENTATION.md) in the root directory.
 
-![Swagger UI Preview](./assets/swagger-preview.png)
+5. Stop everything
 
----
-
-### 5. **Stop everything**
 ```bash
 docker compose down
 ```
+
+---
