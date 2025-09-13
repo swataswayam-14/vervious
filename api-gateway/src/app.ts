@@ -122,6 +122,10 @@ export class ApiGateway {
         swaggerUi.serve,
         swaggerUi.setup(swaggerDocument, swaggerOptions)
       );
+      this.app.use('/docs', (req, res, next) => {
+        res.removeHeader('Content-Security-Policy');
+        next();
+      });
       //this.app.get('/docs', swaggerUi.setup(swaggerDocument, swaggerOptions));
 
       this.app.get('/docs/json', (req, res) => {
