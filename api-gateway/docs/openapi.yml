@@ -14,7 +14,7 @@ info:
     url: https://opensource.org/licenses/MIT
 
 servers:
-  - url: http://localhost:443
+  - url: http://localhost:3000
     description: Development server
   - url: 135.235.247.214:443
     description: Production server

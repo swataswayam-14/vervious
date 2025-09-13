@@ -28,7 +28,7 @@ export class ApiGateway {
 
   constructor() {
     this.app = express();
-    this.port = parseInt(process.env.PORT || '443');
+    this.port = parseInt(process.env.PORT || '3000');
     this.redisClient = new RedisClient(process.env.REDIS_URL);
 
     this.setupMiddleware();
@@ -57,7 +57,7 @@ export class ApiGateway {
     this.app.use(
       cors({
         origin: process.env.ALLOWED_ORIGINS?.split(',') || [
-          'http://localhost:443',
+          'http://localhost:3000',
           'http://135.235.247.214:443',
         ],
         credentials: true,
