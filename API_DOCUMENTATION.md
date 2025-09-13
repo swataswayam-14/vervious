@@ -2,26 +2,6 @@
 
 A comprehensive RESTful API for managing events, bookings, and user authentication. This API uses NATS messaging for microservice communication and provides endpoints for user registration, event management, and booking operations.
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Base URLs](#base-urls)
-- [Authentication](#authentication)
-- [Health Check](#health-check)
-- [Authentication Endpoints](#authentication-endpoints)
-- [Event Management](#event-management)
-- [Booking Management](#booking-management)
-- [Request/Response Schemas](#requestresponse-schemas)
-- [Error Handling](#error-handling)
-- [Pagination](#pagination)
-- [Examples](#examples)
-
-## 🌟 Overview
-
-**API Version**: 1.0.0  
-**License**: MIT  
-**Contact**: support@eventbooking.com  
-
 This API provides a complete event booking platform with:
 - JWT-based authentication system
 - Role-based access control (user/admin)
