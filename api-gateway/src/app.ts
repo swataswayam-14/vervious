@@ -49,16 +49,7 @@ export class ApiGateway {
   }
 
   private setupMiddleware(): void {
-    this.app.use(helmet({
-      contentSecurityPolicy: {
-        directives: {
-          defaultSrc: ["'self'"],
-          styleSrc: ["'self'", "'unsafe-inline'"],
-          scriptSrc: ["'self'", "'unsafe-inline'"],
-          imgSrc: ["'self'", "data:", "https:"],
-        },
-      },
-    }));
+    this.app.use(helmet());
 
     this.app.use(
       cors({
