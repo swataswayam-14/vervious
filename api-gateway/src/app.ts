@@ -102,24 +102,54 @@ export class ApiGateway {
       })
     );
 
-    this.app.use(compression());
+    const shouldCompress: compression.CompressionFilter = (req, res) => {
+      const type = res.getHeader("Content-Type");
+      if (typeof type === "string") {
+        const skipTypes = [
+          /^image\//,
+          /^video\//,
+          /^audio\//,
+          /application\/zip/,
+          /application\/pdf/,
+          /application\/gzip/,
+        ];
+        if (skipTypes.some((regex) => regex.test(type))) {
+          return false;
+        }
+      }
+      return compression.filter(req, res);
+    };
+    this.app.use(compression({ filter: shouldCompress }));
+    
     this.app.use(express.json({ limit: '10mb' }));
     this.app.use(express.urlencoded({ extended: true }));
 
-    const limiter = rateLimit({
-      windowMs: 15 * 60 * 1000, // 15 minutes
-      max: 1000,
-      skip: (req) => req.path.startsWith('/docs'), // Skip rate limiting for docs
-    });
-    this.app.use('/api', limiter);
+    this.app.use('/api', async (req, res, next) => {
+      try {
+        if (req.path.startsWith('/docs')) {
+          return next();
+        }
 
-    this.app.use((req, res, next) => {
-      logger.info(`${req.method} ${req.path}`, {
-        ip: req.ip,
-        userAgent: req.get('User-Agent'),
-        correlationId: req.headers['x-correlation-id'],
-      });
-      next();
+        const ip = req.ip || req.headers['x-forwarded-for'] || 'unknown';
+        const key = `ratelimit:${ip}`;
+        const allowed = await this.redisClient.rateLimit(
+          key,
+          1000,              // max requests
+          15 * 60 * 1000     // 15 minutes
+        );
+
+        if (!allowed) {
+          return res.status(429).json({
+            success: false,
+            error: 'Too many requests, please try again later.'
+          });
+        }
+
+        next();
+      } catch (err) {
+        logger.error('Rate limiting failed:', err);
+        next(); // don’t block requests if Redis is down
+      }
     });
   }
 

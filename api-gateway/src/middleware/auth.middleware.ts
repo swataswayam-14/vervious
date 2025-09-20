@@ -4,6 +4,7 @@ import { type ApiResponse } from '../types/message.types.js';
 import { logger } from '../utils/logger.js';
 import { User } from '../models/user.model.js'; // Your Mongoose user model
 import dotenv from 'dotenv';
+import { RedisClient } from '../redis/client.js';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ export interface AuthenticatedRequest extends Request {
 }
 
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-key-123';
+const redisClient = new RedisClient((process.env.REDIS_URL || 'redis://redis:6379'));
 
 export const authMiddleware = async (
   req: AuthenticatedRequest,
@@ -38,7 +40,6 @@ export const authMiddleware = async (
     }
 
     const decoded = jwt.verify(token, JWT_SECRET) as { userId: string; email: string };
-    console.log(decoded.userId);
     if (!decoded.userId) {
       const response: ApiResponse = {
         success: false,
@@ -47,28 +48,37 @@ export const authMiddleware = async (
       res.status(401).json(response);
       return;
     }
+    let user = await redisClient.get<AuthenticatedRequest['user']>(`user:${decoded.userId}`);
 
-    const user = await User.findById(decoded.userId);
-    if (!user) {
-      const response: ApiResponse = {
-        success: false,
-        error: 'User not found',
+    if(!user) {
+      logger.info(`Cache miss for user:${decoded.userId}, querying DB`);
+      const dbUser = await User.findById(decoded.userId);
+
+      if (!dbUser) {
+        const response: ApiResponse = {
+          success: false,
+          error: 'User not found',
+        };
+        res.status(401).json(response);
+        return;
+      }
+
+      user = {
+        _id: dbUser._id.toString(),
+        email: dbUser.email,
+        name: dbUser.name,
+        role: dbUser.role,
+        isActive: dbUser.isActive,
+        createdAt: dbUser.createdAt?.toISOString(),
+        updatedAt: dbUser.updatedAt?.toISOString(),
       };
-      res.status(401).json(response);
-      return;
+      await redisClient.set(`user:${decoded.userId}`, user, 3600); // re-cache for 1 hour
+    } else {
+      logger.info(`Cache hit for user:${decoded.userId}`);
     }
-
-    req.user = {
-      _id: user._id.toString(),
-      email: user.email,
-      name: user.name,
-      role: user.role,
-      isActive: user.isActive,
-      createdAt: user.createdAt?.toISOString(),
-      updatedAt: user.updatedAt?.toISOString(),
-    };
-
+    req.user = user;
     next();
+
   } catch (error) {
     logger.error('Auth middleware error:', error);
     const response: ApiResponse = {

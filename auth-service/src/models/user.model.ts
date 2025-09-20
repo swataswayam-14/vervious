@@ -70,8 +70,9 @@ const userSchema = new Schema<IUser>(
   }
 );
 
+userSchema.index({ email: 1 }, { unique: true }); 
 userSchema.index({ email: 1, isActive: 1 });
-userSchema.index({ lockedUntil: 1 }, { expireAfterSeconds: 0 });
+userSchema.index({ lockedUntil: 1 });
 
 userSchema.virtual('isLocked').get(function () {
   return !!(this.lockedUntil && this.lockedUntil > new Date());
