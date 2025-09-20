@@ -85,7 +85,52 @@ sequenceDiagram
     Client->>Gateway: Request with invalid/missing token
     Gateway->>Client: 401 Unauthorized response
 ```
+----------------------------------------------------------------
+# Sequence of Refresh Token Validation, Revocation, and New Token Issuance via NATS
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant APIGateway as API Gateway
+    participant NATS
+    participant AuthService as Auth Service
+    participant SessionDB as Session DB
+    participant UserDB as User DB
+
+    %% Step 1: Access token expires
+    Client->>APIGateway: Access resource (expired token)
+    APIGateway-->>Client: 401 Unauthorized
+
+    %% Step 2: Client sends refresh token
+    Client->>APIGateway: POST /refresh { refreshToken }
+    
+    %% Step 3: API Gateway sends NATS request to Auth Service
+    APIGateway->>NATS: publish request NATS_SUBJECTS.AUTH_REFRESH
+    NATS->>AuthService: subscribe & receive refresh request
+
+    %% Step 4: Auth Service validates session
+    AuthService->>SessionDB: Find session by refreshToken & sessionId
+    SessionDB-->>AuthService: Returns session (isRevoked=false, not expired)
+
+    %% Step 5: Validate user
+    AuthService->>UserDB: Find user by userId
+    UserDB-->>AuthService: Return user document
+
+    %% Step 6: Revoke old session & generate new tokens
+    AuthService->>SessionDB: Mark old session as revoked
+    AuthService-->>AuthService: Generate new access & refresh tokens
+
+    %% Step 7: Reply back via NATS
+    AuthService->>NATS: publish response with new tokens
+    NATS->>APIGateway: receive refresh response
+
+    %% Step 8: API Gateway sends new tokens to client
+    APIGateway-->>Client: 200 OK { accessToken, refreshToken }
+
+    %% Step 9: Client retries request with new access token
+    Client->>APIGateway: Access resource (new token)
+    APIGateway-->>Client: 200 OK { requested data }
+```
 
 -----------------------------------------------------------------
 
