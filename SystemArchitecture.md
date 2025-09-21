@@ -65,6 +65,7 @@ sequenceDiagram
 # Auth Middleware Flow
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#000000', 'primaryTextColor':'#000000', 'primaryBorderColor':'#000000', 'lineColor':'#000000', 'sectionBkgColor':'#ffffff', 'altSectionBkgColor':'#ffffff', 'gridColor':'#000000', 'secondaryColor':'#000000', 'tertiaryColor':'#ffffff', 'background':'#ffffff', 'mainBkg':'#ffffff', 'secondBkg':'#ffffff', 'tertiaryBkg':'#ffffff', 'actorTextColor':'#000000', 'signalTextColor':'#000000', 'messageTextColor':'#000000', 'labelTextColor':'#000000', 'loopTextColor':'#000000', 'noteBkgColor':'#ffffff', 'noteTextColor':'#000000', 'activationBkgColor':'#ffffff', 'activationBorderColor':'#000000', 'sequenceNumberColor':'#000000'}}}%%
 sequenceDiagram
     participant Client
     participant Gateway as Auth Middleware
@@ -74,85 +75,100 @@ sequenceDiagram
     participant UserDB as User Database
     participant Handler as Route Handler
 
-    Note over Client,Handler: Successful Authentication Flow
-    Client->>Gateway: Request with Authorization: Bearer <access_token>
-    Gateway->>Gateway: Extract token from header
+    Note over Client,Handler: SUCCESSFUL AUTHENTICATION FLOW
     
-    Gateway->>JWT: JWTUtils.verifyToken(token)
-    JWT->>Gateway: decoded payload {userId, email, sessionId, type}
-    
-    Gateway->>Gateway: Validate token.type === 'access'
-    
-    Gateway->>SessionDB: Session.findOne({sessionId, userId, isRevoked: false})
-    SessionDB->>Gateway: Session document
-    
-    Gateway->>Gateway: Check session.expiresAt > now()
-    
-    Gateway->>Redis: get(`user:${userId}`)
-    alt Cache Hit
-        Redis->>Gateway: Cached user data
-    else Cache Miss
-        Redis->>Gateway: null
-        Gateway->>UserDB: User.findById(userId)
-        UserDB->>Gateway: User document
-        Gateway->>Gateway: Check user.isActive
-        Gateway->>Redis: set(`user:${userId}`, userData, 3600)
+    rect rgb(200, 255, 200)
+        Client->>+Gateway: Request with Authorization: Bearer <token>
+        Gateway->>Gateway: Extract token from header
+        
+        Gateway->>+JWT: verifyToken(token)
+        JWT->>-Gateway: {userId, email, sessionId, type: 'access'}
+        
+        Gateway->>Gateway: Validate token.type === 'access'
+        
+        Gateway->>+SessionDB: findOne({sessionId, userId, isRevoked: false})
+        SessionDB->>-Gateway: Valid Session Document
+        
+        Gateway->>Gateway: Check session.expiresAt > now()
+        
+        Gateway->>+Redis: get(`user:${userId}`)
+        alt Cache Hit
+            Redis->>Gateway: Cached user data
+        else Cache Miss
+            Redis->>Gateway: null
+            Gateway->>+UserDB: User.findById(userId)
+            UserDB->>-Gateway: User document
+            Gateway->>Gateway: Verify user.isActive
+            Gateway->>Redis: set(`user:${userId}`, userData, 3600s)
+        end
+        Redis->>-Gateway: User data ready
+        
+        Gateway->>SessionDB: Update session activity (optional)
+        Gateway->>Gateway: Populate req.user & req.sessionId
+        Gateway->>+Handler: next() - proceed to route
+        Handler->>-Client: Successful Response
+        Gateway->>-Client: 200 OK
     end
-    
-    Gateway->>SessionDB: Update session activity (optional)
-    Gateway->>Gateway: Populate req.user & req.sessionId
-    Gateway->>Handler: next() - proceed to route
 
-    Note over Client,Handler: Failed Authentication Flows
-    
-    rect rgb(255, 240, 240)
-        Note over Gateway: No Token Provided
-        Client->>Gateway: Request without Authorization header
-        Gateway->>Client: 401 "No token provided"
+    Note over Client,Handler: FAILED AUTHENTICATION FLOWS
+
+    rect rgb(255, 235, 235)
+        Note over Gateway: NO TOKEN PROVIDED
+        Client->>+Gateway: Request without Authorization header
+        Gateway->>-Client: 401 "No token provided"
     end
-    
-    rect rgb(255, 240, 240)
-        Note over Gateway: Invalid JWT Token
-        Client->>Gateway: Request with malformed/expired JWT
-        Gateway->>JWT: JWTUtils.verifyToken(token)
-        JWT-->>Gateway: throws error
-        Gateway->>Client: 401 "Invalid or expired token"
+
+    rect rgb(255, 220, 220)
+        Note over Gateway: INVALID JWT TOKEN
+        Client->>+Gateway: Request with malformed/expired JWT
+        Gateway->>+JWT: verifyToken(token)
+        JWT-->>-Gateway: throws TokenExpiredError/JsonWebTokenError
+        Gateway->>-Client: 401 "Invalid or expired token"
     end
-    
-    rect rgb(255, 240, 240)
-        Note over Gateway: Wrong Token Type
-        Client->>Gateway: Request with refresh token as access token
-        Gateway->>JWT: JWTUtils.verifyToken(token)
-        JWT->>Gateway: decoded payload {type: 'refresh'}
-        Gateway->>Gateway: Check token.type !== 'access'
-        Gateway->>Client: 401 "Invalid token type"
+
+    rect rgb(255, 200, 200)
+        Note over Gateway: WRONG TOKEN TYPE
+        Client->>+Gateway: Request with refresh token as access token
+        Gateway->>+JWT: verifyToken(token)
+        JWT->>-Gateway: {type: 'refresh'} ≠ 'access'
+        Gateway->>Gateway: token.type !== 'access'
+        Gateway->>-Client: 401 "Invalid token type"
     end
-    
-    rect rgb(255, 240, 240)
-        Note over Gateway: Session Revoked/Invalid
-        Client->>Gateway: Request with valid JWT but revoked session
-        Gateway->>SessionDB: Session.findOne({sessionId, isRevoked: false})
-        SessionDB->>Gateway: null (session revoked/not found)
-        Gateway->>Client: 401 "Session invalid or expired"
+
+    rect rgb(255, 180, 180)
+        Note over Gateway: SESSION REVOKED/INVALID
+        Client->>+Gateway: Request with valid JWT but revoked session
+        Gateway->>+JWT: verifyToken(token)
+        JWT->>-Gateway: Valid payload
+        Gateway->>+SessionDB: findOne({sessionId, isRevoked: false})
+        SessionDB->>-Gateway: null (session revoked/not found)
+        Gateway->>-Client: 401 "Session invalid or expired"
     end
-    
-    rect rgb(255, 240, 240)
-        Note over Gateway: Session Expired
-        Client->>Gateway: Request with expired session
-        Gateway->>SessionDB: Session.findOne(...)
-        SessionDB->>Gateway: Session with expiresAt < now()
-        Gateway->>SessionDB: Session.deleteOne() - cleanup
-        Gateway->>Client: 401 "Session expired"
+
+    rect rgb(255, 160, 160)
+        Note over Gateway: SESSION EXPIRED
+        Client->>+Gateway: Request with expired session
+        Gateway->>+JWT: verifyToken(token)
+        JWT->>-Gateway: Valid payload
+        Gateway->>+SessionDB: findOne({sessionId, userId, isRevoked: false})
+        SessionDB->>-Gateway: Session with expiresAt < now()
+        Gateway->>Gateway: Check session expired
+        Gateway->>SessionDB: deleteOne() - cleanup expired session
+        Gateway->>-Client: 401 "Session expired"
     end
-    
-    rect rgb(255, 240, 240)
-        Note over Gateway: User Inactive/Deleted
-        Client->>Gateway: Request for deactivated user
-        Gateway->>Redis: get(`user:${userId}`)
-        Redis->>Gateway: null (cache miss)
-        Gateway->>UserDB: User.findById(userId)
-        UserDB->>Gateway: null OR user.isActive = false
-        Gateway->>Client: 401 "User not found or inactive"
+
+    rect rgb(255, 140, 140)
+        Note over Gateway: USER INACTIVE/DELETED
+        Client->>+Gateway: Request for deactivated user
+        Gateway->>+JWT: verifyToken(token)
+        JWT->>-Gateway: Valid payload
+        Gateway->>+SessionDB: Session validation
+        SessionDB->>-Gateway: Valid session
+        Gateway->>+Redis: get(`user:${userId}`)
+        Redis->>-Gateway: null (cache miss)
+        Gateway->>+UserDB: User.findById(userId)
+        UserDB->>-Gateway: null OR user.isActive = false
+        Gateway->>-Client: 401 "User not found or inactive"
     end
 ```
 ----------------------------------------------------------------
