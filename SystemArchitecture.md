@@ -68,22 +68,92 @@ sequenceDiagram
 sequenceDiagram
     participant Client
     participant Gateway as Auth Middleware
-    participant JWT as JWT Library
-    participant MongoDB as User Database
+    participant JWT as JWT Utils
+    participant Redis as Redis Cache
+    participant SessionDB as Session Database
+    participant UserDB as User Database
     participant Handler as Route Handler
 
-    Client->>Gateway: Request with Authorization: Bearer <token>
+    Note over Client,Handler: Successful Authentication Flow
+    Client->>Gateway: Request with Authorization: Bearer <access_token>
     Gateway->>Gateway: Extract token from header
-    Gateway->>JWT: jwt.verify(token, secret)
-    JWT->>Gateway: decoded payload {userId, email}
-    Gateway->>MongoDB: User.findById(userId)
-    MongoDB->>Gateway: User document
-    Gateway->>Gateway: Populate req.user
-    Gateway->>Handler: next() - proceed to route
     
-    Note over Client,Handler: Failed Authentication Flow
-    Client->>Gateway: Request with invalid/missing token
-    Gateway->>Client: 401 Unauthorized response
+    Gateway->>JWT: JWTUtils.verifyToken(token)
+    JWT->>Gateway: decoded payload {userId, email, sessionId, type}
+    
+    Gateway->>Gateway: Validate token.type === 'access'
+    
+    Gateway->>SessionDB: Session.findOne({sessionId, userId, isRevoked: false})
+    SessionDB->>Gateway: Session document
+    
+    Gateway->>Gateway: Check session.expiresAt > now()
+    
+    Gateway->>Redis: get(`user:${userId}`)
+    alt Cache Hit
+        Redis->>Gateway: Cached user data
+    else Cache Miss
+        Redis->>Gateway: null
+        Gateway->>UserDB: User.findById(userId)
+        UserDB->>Gateway: User document
+        Gateway->>Gateway: Check user.isActive
+        Gateway->>Redis: set(`user:${userId}`, userData, 3600)
+    end
+    
+    Gateway->>SessionDB: Update session activity (optional)
+    Gateway->>Gateway: Populate req.user & req.sessionId
+    Gateway->>Handler: next() - proceed to route
+
+    Note over Client,Handler: Failed Authentication Flows
+    
+    rect rgb(255, 240, 240)
+        Note over Gateway: No Token Provided
+        Client->>Gateway: Request without Authorization header
+        Gateway->>Client: 401 "No token provided"
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over Gateway: Invalid JWT Token
+        Client->>Gateway: Request with malformed/expired JWT
+        Gateway->>JWT: JWTUtils.verifyToken(token)
+        JWT-->>Gateway: throws error
+        Gateway->>Client: 401 "Invalid or expired token"
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over Gateway: Wrong Token Type
+        Client->>Gateway: Request with refresh token as access token
+        Gateway->>JWT: JWTUtils.verifyToken(token)
+        JWT->>Gateway: decoded payload {type: 'refresh'}
+        Gateway->>Gateway: Check token.type !== 'access'
+        Gateway->>Client: 401 "Invalid token type"
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over Gateway: Session Revoked/Invalid
+        Client->>Gateway: Request with valid JWT but revoked session
+        Gateway->>SessionDB: Session.findOne({sessionId, isRevoked: false})
+        SessionDB->>Gateway: null (session revoked/not found)
+        Gateway->>Client: 401 "Session invalid or expired"
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over Gateway: Session Expired
+        Client->>Gateway: Request with expired session
+        Gateway->>SessionDB: Session.findOne(...)
+        SessionDB->>Gateway: Session with expiresAt < now()
+        Gateway->>SessionDB: Session.deleteOne() - cleanup
+        Gateway->>Client: 401 "Session expired"
+    end
+    
+    rect rgb(255, 240, 240)
+        Note over Gateway: User Inactive/Deleted
+        Client->>Gateway: Request for deactivated user
+        Gateway->>Redis: get(`user:${userId}`)
+        Redis->>Gateway: null (cache miss)
+        Gateway->>UserDB: User.findById(userId)
+        UserDB->>Gateway: null OR user.isActive = false
+        Gateway->>Client: 401 "User not found or inactive"
+    end
 ```
 ----------------------------------------------------------------
 # Sequence of Refresh Token Validation, Revocation, and New Token Issuance via NATS
