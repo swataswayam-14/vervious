@@ -13,7 +13,7 @@ This API provides a complete event booking platform with:
 ## 🚀 Base URLs
 
 - **Development**: `http://localhost:3000`
-- **Production**: `http://135.235.247.214:443`
+- **Production**: `http://135.235.247.214:3000`
 
 All endpoints should be prefixed with the base URL.
 
@@ -58,7 +58,7 @@ Check the current health status of the API and connected services.
 
 **Example**:
 ```bash
-curl -X GET http://135.235.247.214:443/health
+curl -X GET http://135.235.247.214:3000/health
 ```
 
 ---
@@ -121,7 +121,7 @@ Register a new user account with email verification.
 
 **Example**:
 ```bash
-curl -X POST http://135.235.247.214:443/api/auth/register \
+curl -X POST http://135.235.247.214:3000/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com",
@@ -183,7 +183,7 @@ Authenticate user credentials and return access tokens.
 
 **Example**:
 ```bash
-curl -X POST http://135.235.247.214:443/api/auth/login \
+curl -X POST http://135.235.247.214:3000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com",
@@ -231,7 +231,7 @@ Generate new access token using refresh token.
 
 **Example**:
 ```bash
-curl -X POST http://135.235.247.214:443/api/auth/refresh \
+curl -X POST http://135.235.247.214:3000/api/auth/refresh \
   -H "Content-Type: application/json" \
   -d '{
     "refreshToken": "your_refresh_token_here"
@@ -272,7 +272,7 @@ Invalidate the refresh token.
 
 **Example**:
 ```bash
-curl -X POST http://135.235.247.214:443/api/auth/logout \
+curl -X POST http://135.235.247.214:3000/api/auth/logout \
   -H "Content-Type: application/json" \
   -d '{
     "refreshToken": "your_refresh_token_here"
@@ -324,7 +324,7 @@ Retrieve a list of all active events.
 
 **Example**:
 ```bash
-curl -X GET http://135.235.247.214:443/api/events
+curl -X GET http://135.235.247.214:3000/api/events
 ```
 
 ### POST /api/events
@@ -384,7 +384,7 @@ Create a new event (Admin only).
 
 **Example**:
 ```bash
-curl -X POST http://135.235.247.214:443/api/events \
+curl -X POST http://135.235.247.214:3000/api/events \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your_admin_token" \
   -d '{
@@ -435,7 +435,7 @@ Retrieve detailed information about a specific event.
 
 **Example**:
 ```bash
-curl -X GET http://135.235.247.214:443/api/events/507f1f77bcf86cd799439012
+curl -X GET http://135.235.247.214:3000/api/events/507f1f77bcf86cd799439012
 ```
 
 ### PUT /api/events/{eventId}
@@ -504,7 +504,7 @@ Update an existing event (Admin only).
 
 **Example**:
 ```bash
-curl -X PUT http://135.235.247.214:443/api/events/507f1f77bcf86cd799439012 \
+curl -X PUT http://135.235.247.214:3000/api/events/507f1f77bcf86cd799439012 \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your_admin_token" \
   -d '{
@@ -538,7 +538,7 @@ Delete an existing event (Admin only).
 
 **Example**:
 ```bash
-curl -X DELETE http://135.235.247.214:443/api/events/507f1f77bcf86cd799439012 \
+curl -X DELETE http://135.235.247.214:3000/api/events/507f1f77bcf86cd799439012 \
   -H "Authorization: Bearer your_admin_token"
 ```
 
@@ -586,7 +586,7 @@ Search events by name, description, or category.
 
 **Example**:
 ```bash
-curl -X GET http://135.235.247.214:443/api/events/search/technology
+curl -X GET http://135.235.247.214:3000/api/events/search/technology
 ```
 
 ### GET /api/events/organizer/{organizerId}
@@ -628,7 +628,7 @@ Retrieve all events created by a specific organizer.
 
 **Example**:
 ```bash
-curl -X GET http://135.235.247.214:443/api/events/organizer/507f1f77bcf86cd799439011 \
+curl -X GET http://135.235.247.214:3000/api/events/organizer/507f1f77bcf86cd799439011 \
   -H "Authorization: Bearer your_token"
 ```
 
@@ -691,7 +691,7 @@ Get all bookings with optional filtering (Admin only).
 
 **Example**:
 ```bash
-curl -X GET "http://135.235.247.214:443/api/bookings?status=confirmed&page=1&limit=20" \
+curl -X GET "http://135.235.247.214:3000/api/bookings?status=confirmed&page=1&limit=20" \
   -H "Authorization: Bearer your_admin_token"
 ```
 
@@ -754,7 +754,7 @@ Create a new booking for an event.
 
 **Example**:
 ```bash
-curl -X POST http://135.235.247.214:443/api/bookings \
+curl -X POST http://135.235.247.214:3000/api/bookings \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your_token" \
   -d '{
@@ -825,7 +825,7 @@ Get current user's bookings.
 
 **Example**:
 ```bash
-curl -X GET "http://135.235.247.214:443/api/bookings/my-bookings?status=confirmed" \
+curl -X GET "http://135.235.247.214:3000/api/bookings/my-bookings?status=confirmed" \
   -H "Authorization: Bearer your_token"
 ```
 
@@ -874,7 +874,7 @@ Retrieve detailed information about a specific booking.
 
 **Example**:
 ```bash
-curl -X GET http://135.235.247.214:443/api/bookings/507f1f77bcf86cd799439013 \
+curl -X GET http://135.235.247.214:3000/api/bookings/507f1f77bcf86cd799439013 \
   -H "Authorization: Bearer your_token"
 ```
 
@@ -932,7 +932,7 @@ Cancel an existing booking.
 
 **Example**:
 ```bash
-curl -X PUT http://135.235.247.214:443/api/bookings/507f1f77bcf86cd799439013/cancel \
+curl -X PUT http://135.235.247.214:3000/api/bookings/507f1f77bcf86cd799439013/cancel \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your_token" \
   -d '{
@@ -1023,6 +1023,16 @@ Validate a booking for event entry (Admin only).
 }
 ```
 
+**Example**:
+```bash
+curl -X POST http://135.235.247.214:3000/api/bookings/507f1f77bcf86cd799439013/validate \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer your_admin_token" \
+  -d '{
+    "eventId": "507f1f77bcf86cd799439012"
+  }'
+```
+
 ---
 
 ### GET /api/bookings/event/{eventId}
@@ -1098,6 +1108,12 @@ Retrieve all bookings for a specific event (Admin only).
 }
 ```
 
+**Example**:
+```bash
+curl -X GET "http://135.235.247.214:3000/api/bookings/event/507f1f77bcf86cd799439012?status=confirmed" \
+  -H "Authorization: Bearer your_admin_token"
+```
+
 ---
 
 ### POST /api/bookings/{bookingId}/confirm-payment
@@ -1162,6 +1178,16 @@ Confirm booking payment (Admin only).
 }
 ```
 
+**Example**:
+```bash
+curl -X POST http://135.235.247.214:3000/api/bookings/507f1f77bcf86cd799439013/confirm-payment \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer your_admin_token" \
+  -d '{
+    "paymentTransactionId": "txn_1234567890"
+  }'
+```
+
 ---
 
 ### GET /api/bookings/admin/stats
@@ -1211,4 +1237,10 @@ Get booking statistics (Admin only).
   "error": "Forbidden - Admin access required",
   "data": []
 }
+```
+
+**Example**:
+```bash
+curl -X GET http://135.235.247.214:3000/api/bookings/admin/stats \
+  -H "Authorization: Bearer your_admin_token"
 ```
