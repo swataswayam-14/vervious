@@ -111,6 +111,31 @@ sequenceDiagram
 * **Graceful Shutdowns**
    * Services unsubscribe from NATS before exit.
    * Prevents dangling consumers and message loss.
+ 
+
+## Deployment on Azure VM
+
+Initially, I attempted to run all services inside Docker containers (MongoDB, Redis, NATS, and each microservice).  
+However, I ran into issues when trying to run **all Node.js microservices inside containers** alongside infrastructure services.  
+As a workaround, I chose a **hybrid approach**:
+
+- Infrastructure services (`MongoDB`, `Redis`, `NATS`) → run as Docker containers  
+- Application microservices (`api-gateway`, `auth-service`, `booking-service`, `event-service`) → run via [PM2](https://pm2.keymetrics.io/), a Node.js process manager
+
+---
+
+### Why PM2?
+PM2 is a **production process manager** for Node.js. It spawns and supervises processes using the **Node.js `child_process.fork()` API**, which creates lightweight Node.js child processes with independent event loops, memory, and execution contexts.
+
+Unlike running with `npm start` in a terminal:
+- Processes don’t terminate when we close our SSH session  
+- Crashes are automatically handled with restarts  
+- Logs are captured and rotated  
+- Services can be configured to auto-start on VM reboot  
+
+---
+
+
 
 
 # Running Locally with Docker Compose
