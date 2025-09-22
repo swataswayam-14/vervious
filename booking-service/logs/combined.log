@@ -338,3 +338,18 @@
 {"level":"info","message":"Booking statistics fetched successfully","messageId":"1757675756749","service":"unknown","timestamp":"2025-09-12T11:15:56.756Z"}
 {"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI57V8","service":"unknown","timestamp":"2025-09-12T11:15:56.756Z"}
 {"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-12T11:19:41.014Z"}
+{"level":"info","message":"Connected to MongoDB","service":"unknown","timestamp":"2025-09-22T12:22:45.624Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:22:45.625Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:22:45.635Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:22:45.635Z"}
+{"level":"info","message":"Subscribed to subject: booking.create","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: booking.cancel","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: booking.get","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: booking.list","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: booking.validate","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: booking.stats","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.reserve","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Subscribed to subject: event.capacity.release","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Booking NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-22T12:22:45.636Z"}
+{"level":"info","message":"Booking service started on port 3003","service":"unknown","timestamp":"2025-09-22T12:22:45.637Z"}

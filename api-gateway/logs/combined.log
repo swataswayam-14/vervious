@@ -331,3 +331,108 @@
 {"level":"info","message":"Recieved response from subject: booking.confirm-payment","service":"unknown","timestamp":"2025-09-12T11:15:49.295Z"}
 {"ip":"::1","level":"info","message":"GET /api/bookings/admin/stats","service":"unknown","timestamp":"2025-09-12T11:15:56.740Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}
 {"level":"info","message":"Recieved response from subject: booking.stats","service":"unknown","timestamp":"2025-09-12T11:15:56.758Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:11:18.733Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:11:18.742Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"nats","level":"error","message":"Failed to connect to NATS getaddrinfo ENOTFOUND nats","service":"unknown","stack":"Error: getaddrinfo ENOTFOUND nats\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2025-09-22T12:11:18.762Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:21:34.507Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:21:34.515Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:21:34.523Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:21:34.530Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:21:34.534Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:21:34.535Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:21:34.535Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:21:34.535Z"}
+{"level":"info","message":"Recieved response from subject: auth.register","service":"unknown","timestamp":"2025-09-22T12:23:48.744Z"}
+{"level":"info","message":"Recieved response from subject: auth.login","service":"unknown","timestamp":"2025-09-22T12:24:35.181Z"}
+{"error":"Session.findOne is not a function","ip":"::1","level":"error","message":"Auth middleware error:","service":"unknown","stack":"TypeError: Session.findOne is not a function\n    at authMiddleware (file:///Users/swataswayamdash/Developer/vervious/api-gateway/dist/middleware/auth.middleware.js:36:39)\n    at Layer.handleRequest (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/lib/layer.js:152:17)\n    at /Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/index.js:295:15\n    at processParams (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/index.js:582:12)\n    at next (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/index.js:291:5)\n    at router.handle (/Users/swataswayamdash/Developer/vervious/api-gateway/node_modules/router/index.js:186:3)","timestamp":"2025-09-22T12:25:21.138Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:27:05.005Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:27:13.250Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:27:13.258Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:27:13.264Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:27:13.274Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:27:13.278Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:27:13.278Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:27:13.278Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:27:13.278Z"}
+{"ip":"::1","level":"warn","message":"Non-admin user attempted admin access","service":"unknown","timestamp":"2025-09-22T12:27:21.789Z"}
+{"level":"info","message":"Recieved response from subject: auth.login","service":"unknown","timestamp":"2025-09-22T12:27:48.316Z"}
+{"ip":"::1","level":"warn","message":"Non-admin user attempted admin access","service":"unknown","timestamp":"2025-09-22T12:28:25.868Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:29:55.657Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:30:03.544Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:30:03.553Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:30:03.559Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:30:03.566Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:30:03.570Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:30:03.570Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:30:03.570Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:30:03.570Z"}
+{"ip":"::1","level":"warn","message":"Non-admin user attempted admin access","service":"unknown","timestamp":"2025-09-22T12:30:12.441Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:31:04.043Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:31:08.317Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:31:08.326Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:31:08.331Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:31:08.338Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:31:08.342Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:31:08.342Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:31:08.342Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:31:08.342Z"}
+{"ip":"::1","level":"warn","message":"Non-admin user attempted admin access","service":"unknown","timestamp":"2025-09-22T12:31:14.341Z"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:34:53.898Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:35:00.413Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:35:00.422Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:35:00.427Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:35:00.433Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:35:00.437Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:35:00.437Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:35:00.437Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:35:00.437Z"}
+{"level":"error","message":"Invalid user object from cache/database","service":"unknown","timestamp":"2025-09-22T12:35:04.933Z","user":{"createdAt":"2025-09-22T12:23:48.731Z","email":"user69@example.com","id":"68d13fd477af4b61801169d9","isActive":true,"lastLoginAt":"2025-09-22T12:27:48.308Z","name":"Steguf Billu","updatedAt":"2025-09-22T12:27:48.308Z"},"userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"Recieved response from subject: auth.login","service":"unknown","timestamp":"2025-09-22T12:35:26.022Z"}
+{"level":"error","message":"Invalid user object from cache/database","service":"unknown","timestamp":"2025-09-22T12:35:47.195Z","user":{"createdAt":"2025-09-22T12:23:48.731Z","email":"user69@example.com","id":"68d13fd477af4b61801169d9","isActive":true,"lastLoginAt":"2025-09-22T12:35:26.012Z","name":"Steguf Billu","updatedAt":"2025-09-22T12:35:26.012Z"},"userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:37:14.567Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:37:19.068Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:37:19.077Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:37:19.082Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:37:19.087Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:37:19.091Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:37:19.091Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:37:19.091Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:37:19.091Z"}
+{"level":"warn","message":"User object missing role, setting default","service":"unknown","timestamp":"2025-09-22T12:37:26.780Z","userEmail":"user69@example.com","userId":"68d13fd477af4b61801169d9"}
+{"email":"user69@example.com","ip":"::1","level":"warn","message":"Non-admin user attempted admin access","method":"POST","path":"/","role":"user","service":"unknown","timestamp":"2025-09-22T12:37:26.787Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:38:11.652Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:38:19.489Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:38:19.497Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:38:19.503Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:38:19.508Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:38:19.512Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:38:19.512Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:38:19.512Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:38:19.512Z"}
+{"level":"warn","message":"User object missing role, setting default","service":"unknown","timestamp":"2025-09-22T12:38:26.083Z","userEmail":"user69@example.com","userId":"68d13fd477af4b61801169d9"}
+{"email":"user69@example.com","ip":"::1","level":"warn","message":"Non-admin user attempted admin access","method":"POST","path":"/","role":"user","service":"unknown","timestamp":"2025-09-22T12:38:26.089Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:41:35.395Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:41:39.846Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:41:39.855Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:41:39.861Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:41:39.866Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:41:39.871Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:41:39.871Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:41:39.871Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:41:39.871Z"}
+{"level":"warn","message":"Cached user missing role, invalidating cache and refetching","service":"unknown","timestamp":"2025-09-22T12:41:52.807Z","userEmail":"user69@example.com","userId":"68d13fd477af4b61801169d9"}
+{"error":"redisClient.delete is not a function","ip":"::1","level":"error","message":"Auth middleware error:","service":"unknown","stack":"TypeError: redisClient.delete is not a function\n    at authMiddleware (file:///Users/swataswayamdash/Developer/vervious/api-gateway/dist/middleware/auth.middleware.js:106:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-09-22T12:41:52.807Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}
+{"level":"info","message":"Received SIGINT, shutting down gracefully","service":"unknown","timestamp":"2025-09-22T12:42:51.455Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-22T12:42:57.944Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:42:57.952Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-22T12:42:57.958Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:42:57.964Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-22T12:42:57.967Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-22T12:42:57.968Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-22T12:42:57.968Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-22T12:42:57.968Z"}
+{"level":"warn","message":"Cached user missing role, invalidating cache and refetching","service":"unknown","timestamp":"2025-09-22T12:43:03.735Z","userEmail":"user69@example.com","userId":"68d13fd477af4b61801169d9"}
+{"email":"user69@example.com","ip":"::1","level":"info","message":"Admin access granted","method":"POST","path":"/","service":"unknown","timestamp":"2025-09-22T12:43:03.750Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"Recieved response from subject: event.create","service":"unknown","timestamp":"2025-09-22T12:43:03.758Z"}
+{"email":"user69@example.com","ip":"::1","level":"info","message":"Admin access granted","method":"POST","path":"/","service":"unknown","timestamp":"2025-09-22T12:43:15.353Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"Recieved response from subject: event.create","service":"unknown","timestamp":"2025-09-22T12:43:15.383Z"}

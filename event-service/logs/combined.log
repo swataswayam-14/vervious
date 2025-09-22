@@ -497,3 +497,29 @@
 {"level":"info","message":"Event created successfully: 68c4007a15850c94694447d7","messageId":"1757675642726","service":"unknown","timestamp":"2025-09-12T11:14:02.748Z"}
 {"level":"info","message":"Published message to subject: _INBOX.LOV7CDYYJ3YSLIH1GI55WK.LOV7CDYYJ3YSLIH1GI56N2","service":"unknown","timestamp":"2025-09-12T11:14:02.748Z"}
 {"level":"info","message":"SIGINT received, shutting down","service":"unknown","timestamp":"2025-09-12T11:19:37.447Z"}
+{"level":"info","message":"Connected to MongoDB via Mongoose","service":"unknown","timestamp":"2025-09-22T12:22:23.451Z"}
+{"level":"info","message":"Connected to Redis","service":"unknown","timestamp":"2025-09-22T12:22:23.457Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-22T12:22:23.457Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:22:23.464Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:22:23.464Z"}
+{"level":"info","message":"Subscribed to subject: event.create","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.update","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.list","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.get","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.delete","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.search","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.organizer","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.upcoming","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Subscribed to subject: event.tickets.update","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Event NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-22T12:22:23.465Z"}
+{"level":"info","message":"Event service started and handlers registered","service":"unknown","timestamp":"2025-09-22T12:22:23.466Z"}
+{"level":"info","message":"Event service listening on port 3005","service":"unknown","timestamp":"2025-09-22T12:22:23.466Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-22T12:43:03.753Z"}
+{"level":"info","message":"Processing event create request: Tech Staility AI 2026","messageId":"1758544983751","service":"unknown","timestamp":"2025-09-22T12:43:03.754Z"}
+{"error":"Event date must be in the future","level":"error","message":"Event create handler error:","messageId":"1758544983751","service":"unknown","timestamp":"2025-09-22T12:43:03.757Z"}
+{"level":"info","message":"Published message to subject: _INBOX.7OGK09UDSRS2T4AXM0T09K.7OGK09UDSRS2T4AXM0T05E","service":"unknown","timestamp":"2025-09-22T12:43:03.757Z"}
+{"level":"info","message":"Received message from subject: event.create","service":"unknown","timestamp":"2025-09-22T12:43:15.356Z"}
+{"level":"info","message":"Processing event create request: Tech Staility AI 2026","messageId":"1758544995354","service":"unknown","timestamp":"2025-09-22T12:43:15.356Z"}
+{"eventId":"68d14463f5b7994c8ed23945","level":"info","message":"New event created: Tech Staility AI 2026","organizerId":"68d13fd477af4b61801169d9","service":"unknown","timestamp":"2025-09-22T12:43:15.379Z"}
+{"level":"info","message":"Event created successfully: 68d14463f5b7994c8ed23945","messageId":"1758544995354","service":"unknown","timestamp":"2025-09-22T12:43:15.382Z"}
+{"level":"info","message":"Published message to subject: _INBOX.7OGK09UDSRS2T4AXM0T09K.7OGK09UDSRS2T4AXM0T0DQ","service":"unknown","timestamp":"2025-09-22T12:43:15.382Z"}

@@ -112,3 +112,21 @@
 {"level":"info","message":"User logged in successfully: 68c3f7a054b24acf0212d5c1","messageId":"1757675583728","service":"unknown","timestamp":"2025-09-12T11:13:03.969Z"}
 {"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-12T11:19:42.680Z"}
 {"level":"info","message":"Shutting down gracefully...","service":"unknown","timestamp":"2025-09-12T11:19:42.684Z"}
+{"level":"info","message":"Database connected successfully","service":"unknown","timestamp":"2025-09-22T12:21:54.832Z"}
+{"level":"info","message":"Redis connected successfully","service":"unknown","timestamp":"2025-09-22T12:21:54.838Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-22T12:21:54.851Z"}
+{"level":"info","message":"NATS handlers registered successfully","service":"unknown","timestamp":"2025-09-22T12:21:54.851Z"}
+{"level":"info","message":"NATS handlers setup successfully","service":"unknown","timestamp":"2025-09-22T12:21:54.851Z"}
+{"level":"info","message":"Auth service listening on port 3002","service":"unknown","timestamp":"2025-09-22T12:21:54.852Z"}
+{"level":"info","message":"Processing register request for: user69@example.com","messageId":"1758543828495","service":"unknown","timestamp":"2025-09-22T12:23:48.500Z"}
+{"level":"info","message":"New user registered: user69@example.com","service":"unknown","timestamp":"2025-09-22T12:23:48.736Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"User registered successfully: 68d13fd477af4b61801169d9","messageId":"1758543828495","service":"unknown","timestamp":"2025-09-22T12:23:48.742Z"}
+{"level":"info","message":"Processing login request for: user69@example.com","messageId":"1758543874935","service":"unknown","timestamp":"2025-09-22T12:24:34.937Z"}
+{"level":"info","message":"User logged in: user69@example.com","service":"unknown","timestamp":"2025-09-22T12:24:35.175Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"User logged in successfully: 68d13fd477af4b61801169d9","messageId":"1758543874935","service":"unknown","timestamp":"2025-09-22T12:24:35.181Z"}
+{"level":"info","message":"Processing login request for: user69@example.com","messageId":"1758544068074","service":"unknown","timestamp":"2025-09-22T12:27:48.076Z"}
+{"level":"info","message":"User logged in: user69@example.com","service":"unknown","timestamp":"2025-09-22T12:27:48.310Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"User logged in successfully: 68d13fd477af4b61801169d9","messageId":"1758544068074","service":"unknown","timestamp":"2025-09-22T12:27:48.315Z"}
+{"level":"info","message":"Processing login request for: user69@example.com","messageId":"1758544525778","service":"unknown","timestamp":"2025-09-22T12:35:25.782Z"}
+{"level":"info","message":"User logged in: user69@example.com","service":"unknown","timestamp":"2025-09-22T12:35:26.015Z","userId":"68d13fd477af4b61801169d9"}
+{"level":"info","message":"User logged in successfully: 68d13fd477af4b61801169d9","messageId":"1758544525778","service":"unknown","timestamp":"2025-09-22T12:35:26.021Z"}

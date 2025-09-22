@@ -4,16 +4,16 @@ export const config = {
   port: process.env.PORT || 3002,
   
   database: {
-    url: process.env.DATABASE_URL || 'mongodb://mongo:27017',
+    url: process.env.DATABASE_URL || 'mongodb://localhost:27017',
     name: process.env.DATABASE_NAME || 'auth_service',
   },
   
   redis: {
-    url: process.env.REDIS_URL || 'redis://redis:6379',
+    url: process.env.REDIS_URL || 'redis://localhost:6379',
   },
   
   nats: {
-    servers: process.env.NATS_SERVERS?.split(',') || ['nats://nats:4222'],
+    servers: process.env.NATS_SERVERS?.split(',') || ['nats://localhost:4222'],
   },
   
   jwt: {

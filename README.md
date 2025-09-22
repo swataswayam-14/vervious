@@ -136,9 +136,9 @@ cd vervious
    Create a `.env` file in each service with the following:
 
 ```
-MONGO_URI=mongodb://mongo:27017/evently
-REDIS_URL=redis://redis:6379
-NATS_URL=nats://nats:4222
+MONGO_URI=mongodb://localhost:27017/evently
+REDIS_URL=redis://localhost:6379
+NATS_URL=nats://localhost:4222
 JWT_SECRET=your_jwt_secret
 ```
 

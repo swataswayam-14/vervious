@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 
 async function startServer() {
   try {
-    const mongoUri = process.env.MONGO_URI || 'mongodb://mongo:27017';
+    const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017';
     const dbName = process.env.DB_NAME || 'auth_service';
     await mongoose.connect(mongoUri, { dbName });
     logger.info('Connected to MongoDB');

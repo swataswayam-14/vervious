@@ -12,7 +12,7 @@ export class NatsClient extends EventEmitter {
   private maxReconnectAttempts = 10;
   private reconnectInterval = 5000;
 
-  constructor(private servers: string[] = ['nats://nats:4222']) {
+  constructor(private servers: string[] = ['nats://localhost:4222']) {
     super();
   }
 

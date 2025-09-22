@@ -4,7 +4,7 @@ export class RedisClient {
   private client: IORedis.Redis;
   private isConnected = false;
 
-  constructor(private url: string = 'redis://redis:6379') {
+  constructor(private url: string = 'redis://localhost:6379') {
     this.client = new IORedis.Redis(url, {
       maxRetriesPerRequest: 3,
       lazyConnect: true,

@@ -58,7 +58,7 @@ const startServer = async () => {
     logger.info('Redis connected successfully');
     
     await connectNats(
-      process.env.NATS_URL?.split(',') || ['nats://nats:4222']
+      process.env.NATS_URL?.split(',') || ['nats://localhost:4222']
     );
     logger.info('Connected to NATS');
 

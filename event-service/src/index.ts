@@ -38,7 +38,7 @@ app.get('/metrics', async (req, res) => {
   });
 });
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:27017';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017';
 const DB_NAME = process.env.DB_NAME || 'auth_service';
 
 async function main() {
@@ -55,7 +55,7 @@ async function main() {
     const redis = new RedisClient(process.env.REDIS_URL);
     await redis.connect();
     logger.info('Connected to Redis');
-    await connectNats(process.env.NATS_URL?.split(',') || ['nats://nats:4222']);
+    await connectNats(process.env.NATS_URL?.split(',') || ['nats://localhost:4222']);
     logger.info('Connected to NATS');
 
     const eventService = new EventService(redis);

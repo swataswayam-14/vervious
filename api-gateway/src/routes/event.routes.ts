@@ -76,6 +76,8 @@ router.post(
   async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
     try {
       const natsClient = getNatsClient();
+      console.log(req.user);
+      
 
       const request: EventCreateRequest = {
         ...req.body,
