@@ -150,7 +150,7 @@ docker compose up --build
 
 4. Access the platform
 
-**Production URL: http://135.235.247.214:443/api**
+**Production URL: http://135.235.247.214:3000/api**
 
 > **Note:** Swagger UI is only visible when running locally at `http://localhost:3000/docs`. It does not show in production due to CORS restrictions. Run it locally using `docker compose up` to explore all API routes.
 
