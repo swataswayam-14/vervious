@@ -451,14 +451,16 @@ natsClient.subscribe<{ eventId: string; quantity: number; messageId: string; tim
         quantity: requestData.quantity,
       });
 
-      const event = await Event.findById(requestData.eventId).session(session);
+      const event = await Event.findByIdAndUpdate(
+        requestData.eventId,
+        { $inc: { availableTickets: requestData.quantity } },
+        { new: true, session }
+      );
+
       if (!event) {
         throw new Error("Event not found");
       }
-
-      event.capacity += requestData.quantity;
-      await event.save({ session });
-
+      
       await session.commitTransaction();
       session.endSession();
 

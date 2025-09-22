@@ -227,9 +227,6 @@ async cancelBooking(
       if (!updatedBooking) {
         throw new Error("Failed to update booking");
       }
-      await Event.findByIdAndUpdate(new Types.ObjectId(booking.eventId), {
-        $inc: { availableTickets: booking.ticketQuantity },
-      });
       await EventCapacityLog.create({
         eventId: new Types.ObjectId(booking.eventId),
         operation: "release",
