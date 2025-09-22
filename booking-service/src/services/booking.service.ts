@@ -97,10 +97,6 @@ async createBooking(bookingData: CreateBookingInput): Promise<BookingDTO> {
 
       const savedBooking = await booking.save();
 
-      await Event.findByIdAndUpdate(event._id, {
-        $inc: { availableTickets: -bookingData.ticketQuantity }
-      });
-
       await EventCapacityLog.create([{
         eventId: event._id,
         operation: 'reserve',
