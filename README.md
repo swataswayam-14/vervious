@@ -133,6 +133,12 @@ Unlike running with `npm start` in a terminal:
 - Logs are captured and rotated  
 - Services can be configured to auto-start on VM reboot  
 
+
+## Production Terminal Screenshot
+
+### Below is a real screenshot of the production environment running on the Azure VM:
+
+![Production Terminal ScreenShot](./assets/production-terminal.png)
 ---
 
 
