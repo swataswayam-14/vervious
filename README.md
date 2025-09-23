@@ -179,6 +179,8 @@ JWT_SECRET=your_jwt_secret
 
 Follow these steps to run the application locally:
 
+- Ensure the docker containers (mongo ,redis and nats) are running with appropriate port mappings before proceeding.
+
 ### 1. API Gateway
 
 ```bash
