@@ -173,11 +173,65 @@ NATS_URL=nats://localhost:4222
 JWT_SECRET=your_jwt_secret
 ```
 
-3. Build and start all services
+# Microservices Application
+
+## 3. Local Development Setup
+
+Follow these steps to run the application locally:
+
+### 1. API Gateway
 
 ```bash
-docker compose up --build
+cd api-gateway
+npm install
+npm run build
+npm run start
 ```
+
+### 2. Auth Service
+
+```bash
+cd auth-service
+npm install
+npm run build
+npm run start
+```
+
+### 3. Event Service
+
+```bash
+cd event-service
+npm install
+npm run build
+npm run start
+```
+
+### 4. Booking Service
+
+```bash
+cd booking-service
+npm install
+npm run build
+npm run start
+```
+
+## Accessing the Application
+
+Once all services are running, you can access:
+
+- **API Documentation**: [http://localhost:3000/docs](http://localhost:3000/docs)
+- **API Endpoints**: [http://localhost:3000/api](http://localhost:3000/api)
+
+
+## Development Workflow
+
+1. Clone the repository
+2. Navigate to each service directory
+3. Install dependencies with `npm install`
+4. Build the service with `npm run build`
+5. Start the service with `npm run start`
+6. Repeat for all services
+   
 
 4. Access the platform
 
@@ -190,11 +244,3 @@ Here's how the **Swagger UI** looks when running locally:
 ![Swagger UI Preview](./assets/swagger-preview.png)
 
 **For complete API route details and comprehensive understanding, please navigate to [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) in the root directory.**
-
-5. Stop everything
-
-```bash
-docker compose down
-```
-
----
