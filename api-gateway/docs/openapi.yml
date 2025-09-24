@@ -16,7 +16,7 @@ info:
 servers:
   - url: http://localhost:3000
     description: Development server
-  - url: 135.235.247.214:443
+  - url: 135.235.247.214:3000
     description: Production server
 
 paths:
