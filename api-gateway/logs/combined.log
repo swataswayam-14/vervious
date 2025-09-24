@@ -436,3 +436,11 @@
 {"level":"info","message":"Recieved response from subject: event.create","service":"unknown","timestamp":"2025-09-22T12:43:03.758Z"}
 {"email":"user69@example.com","ip":"::1","level":"info","message":"Admin access granted","method":"POST","path":"/","service":"unknown","timestamp":"2025-09-22T12:43:15.353Z","userId":"68d13fd477af4b61801169d9"}
 {"level":"info","message":"Recieved response from subject: event.create","service":"unknown","timestamp":"2025-09-22T12:43:15.383Z"}
+{"level":"info","message":"Swagger documentation setup complete at /docs","service":"unknown","timestamp":"2025-09-24T02:45:39.636Z"}
+{"0":"nats://localhost:4222","level":"info","message":"Connecting to NATS server","service":"unknown","timestamp":"2025-09-24T02:45:39.644Z"}
+{"level":"info","message":"MongoDB connected","service":"unknown","timestamp":"2025-09-24T02:45:39.649Z"}
+{"level":"info","message":"Connected to NATS","service":"unknown","timestamp":"2025-09-24T02:45:39.657Z"}
+{"level":"info","message":"API Gateway started on port 3000","service":"unknown","timestamp":"2025-09-24T02:45:39.660Z"}
+{"level":"info","message":"API Documentation available at http://135.235.247.214:3000/docs","service":"unknown","timestamp":"2025-09-24T02:45:39.660Z"}
+{"level":"info","message":"Health check available at http://135.235.247.214:3000/health","service":"unknown","timestamp":"2025-09-24T02:45:39.660Z"}
+{"level":"info","message":"OpenAPI spec available at http://135.235.247.214:3000/docs/json","service":"unknown","timestamp":"2025-09-24T02:45:39.660Z"}
