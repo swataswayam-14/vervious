@@ -157,51 +157,52 @@ export class AuthService {
     });
   }
 
-  async refreshTokens(refreshToken: string): Promise<AuthTokens> {
-    return this.circuitBreaker.execute(async () => {
-      const payload = JWTUtils.verifyToken(refreshToken);
-      
-      if (payload.type !== 'refresh') {
-        throw new Error('Invalid token type');
-      }
-
-      const session = await Session.findOne({
-        sessionId: payload.sessionId,
-        refreshToken,
-        isRevoked: false,
-      });
-
-      if (!session) {
-        throw new Error('Invalid or expired refresh token');
-      }
-
-      if (session.expiresAt < new Date()) {
-        await Session.deleteOne({ _id: session._id });
-        throw new Error('Refresh token expired');
-      }
-
-      let user = await this.getCachedUserData(payload.userId);
-      if (!user) {
-        const userDoc = await User.findById(payload.userId);
-        if (!userDoc || !userDoc.isActive) {
-          throw new Error('User not found or inactive');
-        }
-        user = userDoc;
-        await this.cacheUserData(payload.userId, userDoc);
-      }
-
-      session.isRevoked = true;
-      await session.save();
-
-      logger.info(`Tokens refreshed for user: ${user.email}`, { userId: user._id });
-
-      return await this.generateTokensWithSession(
-        payload.userId, 
-        user.email, 
-        session.deviceInfo
-      );
+async refreshTokens(refreshToken: string): Promise<AuthTokens> {
+  return this.circuitBreaker.execute(async () => {
+    const payload = JWTUtils.verifyToken(refreshToken);
+    
+    if (payload.type !== 'refresh') {
+      throw new Error('Invalid token type');
+    }
+    const session = await Session.findOne({
+      sessionId: payload.sessionId,
+      refreshToken,
+      isRevoked: false,
     });
-  }
+
+    if (!session) {
+      throw new Error('Invalid or expired refresh token');
+    }
+    if (session.expiresAt < new Date()) {
+      await Session.deleteOne({ _id: session._id });
+      throw new Error('Refresh token expired');
+    }
+
+    let user = await this.getCachedUserData(payload.userId);
+    if (!user) {
+      const userDoc = await User.findById(payload.userId);
+      if (!userDoc || !userDoc.isActive) {
+        throw new Error('User not found or inactive');
+      }
+      user = userDoc;
+      await this.cacheUserData(payload.userId, userDoc);
+    }
+    const newAccessToken = JWTUtils.generateAccessToken(
+      payload.userId,
+      user.email,
+      payload.sessionId 
+    );
+
+    logger.info(`Access token refreshed for user: ${user.email}`, { 
+      userId: user._id,
+      sessionId: payload.sessionId
+    });
+    return {
+      accessToken: newAccessToken,
+      refreshToken: refreshToken,
+    };
+  });
+}
 
   async logout(refreshToken: string): Promise<void> {
     try {
